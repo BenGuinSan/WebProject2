@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSite</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css">
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="header">
+        <nav class="header__navbar">
+          <ul class="header__navbar-list">
+            <li class="header__navbar-items">
+              <i class="header__navbar-items-icon fa-solid fa-tag"></i>
+              <a href="" class="header__navbar-text">Khuyến mãi</a>
+            </li>
+            <li class="header__navbar-items">
+              <i class="header__navbar-items-icon fa-solid fa-building"></i>
+              <a href="" class="header__navbar-text">Hệ thống Showroom</a>
+            </li>
+            <li class="header__navbar-items">
+              <i class="header__navbar-items-icon fa-solid fa-headphones"></i>
+              <a href="" class="header__navbar-text">Tư vấn mua hàng: 1091091090</a>
+            </li>
+            <li class="header__navbar-items">
+              <i class="header__navbar-items-icon fa-solid fa-headphones""></i>
+              <a href="" class="header__navbar-text">CSKH: 0916161616</a>
+            </li>
+            <li class="header__navbar-items">
+              <i class="header__navbar-items-icon fa-solid fa-computer"></i>
+              <a href="" class="header__navbar-text">Tin công nghệ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__main-navbar">
+          <div class="grid">
+            <div class="header__mainNav">
+              <div class="header__mainNav-logo">
+                <a href="/" class="header__mainNav-logo-link">
+                  <img src="./assets/img/zyro-image.png" alt="" class="headr__mainNav-logo-img">
+                </a>
+              </div>
+
+              <div class="header__search">
+                <div class="header__search-border">
+                  <div class="header__search-input-wrap">
+                    <input type="text" class="header__search-input" placeholder="Nhập từ khóa cần tìm">
+
+                    <div class="header__search-history">
+                      <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                      <ul class="header__search-history-list">
+                        <li class="header__search-history-item">
+                          <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                          <a href="">bàn phím</a>
+                        </li>
+                        <li class="header__search-history-item">
+                          <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                          <a href="">chuột</a>
+                        </li>
+                        <li class="header__search-history-item">
+                          <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                          <a href="">tai nghe</a>
+                        </li>
+                      </ul>
+                      <footer class="header__history-footer">
+                        <a href="" class="header__history-footer-btn">Xem toàn bộ lịch sử</a>
+                      </footer>
+                    </div>
+                  </div>
+                  <button class="header__search-btn">
+                    <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+              </div>
+              
+
+              <ul class="header__mainNav-list">
+                <li class="header__mainNav-item">
+                  <!-- User -->
+                  <div class="header__user">
+                    <!-- no-loggin -->
+                    <i class="header__user-icon fa-regular fa-circle-user"></i>
+                    <div class="header__user-sig">
+                      <span class="header__user-register">Đăng ký</span>
+                      <br>
+                      <span class="header__user-login">Đăng nhập</span>
+                    </div>
+                    <!-- login -->
+                    <!-- <i class="header__user-icon fa-regular fa-circle-user"></i>
+                    <div class="user-name">Thanh Phúc</div> -->
+                  </div>
+                  <!-- <div class="user-subnav">
+                    <ul class="user-subnav__list-admin">
+                      <li class="user-subnav__item">Thông tin người dùng</li>
+                      <li class="user-subnav__item">Quản lý sản phẩm</li>
+                      <li class="user-subnav__item">Đăng xuất</li>
+                    </ul>
+                  </div> -->
+                  <div class="user-subnav">
+                    <ul class="user-subnav__list-admin">
+                      <li class="user-subnav__item">Thông tin người dùng</li>
+                      <li class="user-subnav__item">Đăng xuất</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__mainNav-item ">
+                  <!-- Notification -->
+                  <div class="header__notify ">
+                    <i class="header__notify-icon fa-regular fa-bell"></i>
+                    <span class="header__notify-text">Thông báo</span>
+                  </div>
+                  <div class="header__notify-detail">
+                    <header class="header__notify-heading">
+                      Thông báo mới nhận 
+                    </header>
+                    <ul class="header__notify-list">
+                      <li class="header__notify-item ">
+                        <a href="" class="header__notify-link">
+                          <img src="./assets/img/noti-img-1.jpg" alt="" class="header__notify-img">
+                          <div class="header__notify-info">
+                            <span class="header__notify-name">
+                              Laptop HP VICTUS chính hãng
+                            </span>
+                            <span class="header__notify-description">
+                              Laptop HP VICTUS chính hãng rẽ nhất tại shop, trả góp 0%
+                            </span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="header__notify-item">
+                        <a href="" class="header__notify-link">
+                          <img src="./assets/img/noti-img-3.jpg" alt="" class="header__notify-img">
+                          <div class="header__notify-info">
+                            <span class="header__notify-name">
+                              Màn hình TUF Gaming ZAKU II
+                            </span>
+                            <span class="header__notify-description">
+                              Màn hình TUF Gaming ZAKU IIchính hãng rẽ nhất tại shop, trả góp 0%
+                            </span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="header__notify-item">
+                        <a href="" class="header__notify-link">
+                          <img src="./assets/img/noti-img-2.jpg" alt="" class="header__notify-img">
+                          <div class="header__notify-info">
+                            <span class="header__notify-name">
+                              Bàn phím Newmen GM840 Pro Tiên Hạc Trăng chính hãng
+                            </span>
+                            <span class="header__notify-description">
+                              Bàn phím Newmen GM840 Pro Tiên Hạc Trăng tại shop, trả góp 0%
+                            </span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                    <footer class="header__notify-footer">
+                      <a href="" class="header__notify-footer-btn">Xem tất cả thông báo</a>
+                    </footer>
+                  </div>
+
+                </li>
+                <li class="header__mainNav-item">
+                  <div class="header__cart">
+                    <a href="" class="header__cart-link">
+                      <i class="header__cart-icon ti-shopping-cart"></i>
+                      <span class="header__cart-text">Giỏ hàng</span>
+                    </a>  
+                  </div>
+                  <div class="header__cart-detail header__cart-detail--no-card">
+                    <!-- No-cart -->
+                    <img src="./assets/img/no-item-cart.png" alt="" class="header__no-cart-img">
+                    <span class="header__no-cart-msg">Giỏ hàng chưa có sản phẩm nào</span>
+                    <!-- Have-cart -->
+                  </div>
+                </li>
+              </ul>   
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <div class="app__container">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <a href="#" class="mySlides-link">
+                <img src="./assets/img/silde-img-1.png" alt="" style="width: 100%;" class="mySlides-img">
+              </a>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <a href="#" class="mySlides-link">
+                <img src="./assets/img/slide-img-2.png" alt="" style="width: 100%;" class="mySlides-img">
+              </a>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <a href="#" class="mySlides-link">
+                <img src="./assets/img/slide-img-3.png" alt="" style="width: 100%;" class="mySlides-img">
+              </a>
+            </div>
+            <!-- Nút chuyển hướng -->
+            <div class="test">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!-- Dấu chấm chuyển hướng -->
+            <div style="text-align:center" class="dot-list">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="grid__row app_content">
+              <div class="grid__col">
+                <div class="banner_item">
+                  <a href="#" class="banner__item-link">
+                    <img src="./assets/img/banner-img-1.png" alt="" class="banner__item-img">
+                  </a>
+                </div>
+
+                <div class="banner_item">
+                    <a href="#" class="banner__item-link">
+                      <img src="./assets/img/banner-img-2.png" alt="" class="banner__item-img">
+                    </a>
+                </div>
+
+                <div class="banner_item">
+                    <a href="#" class="banner__item-link">
+                      <img src="./assets/img/banner-img-3.png" alt="" class="banner__item-img">
+                    </a>
+                </div>
+
+                <div class="banner_item">
+                    <a href="#" class="banner__item-link">
+                      <img src="./assets/img/banner-img-4.png" alt="" class="banner__item-img">
+                    </a>
+                </div>
+              </div>
+              
+              <div class="grid__col-2">
+                <nav class="category">
+                  <h3 class="category__heading">
+                    <i class="category__heading-icon fa-solid fa-list"></i>
+                    Danh mục sản phẩm
+                  </h3>
+                  <ul class="category-list">
+                    <li class="category-item" onclick="filterProduct('all')">
+                      <a class="category-item__link category-item--active ">
+                        <i class="category-item-icon fa-solid fa-border-all"></i>
+                        <span class="category-item-name">Xem tất cả</span>
+                      </a>
+                    </li>
+                    <li class="category-item" onclick="filterProduct('Laptop')">
+                      <a class="category-item__link" >
+                        <i class="category-item-icon fa-solid fa-laptop"></i>
+                        <span class="category-item-name">Laptop</span>
+                      </a>
+                    </li>
+                    <li class="category-item" onclick="filterProduct('Monitor')">
+                      <a class="category-item__link">
+                        <i class="category-item-icon fa-solid fa-computer"></i>
+                        <span class="category-item-name">Màn hình máy tính</span>
+                      </a>
+                    </li>
+                    <li class="category-item" onclick="filterProduct('Headphone')">
+                      <a class="category-item__link">
+                        <i class="category-item-icon fa-solid fa-headphones"></i>
+                        <span class="category-item-name">Tai nghe</span>
+                      </a>
+                    </li>
+                    <li class="category-item " onclick="filterProduct('Console')">
+                      <a class="category-item__link">
+                        <i class="category-item-icon fa-solid fa-gamepad"></i>
+                        <span class="category-item-name">Máy chơi game</span>
+                      </a>
+                    </li>
+                    <li class="category-item" onclick="filterProduct('Mouse')">
+                      <a class="category-item__link">
+                        <i class="category-item-icon fa-solid fa-computer-mouse"></i>
+                        <span class="category-item-name">Chuột</span>
+                      </a>
+                    </li>
+                    <li class="category-item" onclick="filterProduct('Keyboard')">
+                      <a class="category-item__link">
+                        <i class="category-item-icon fa-solid fa-keyboard"></i>
+                        <span class="category-item-name">Bàn phím</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="grid__col-10">
+                  <div class="home-filter">
+                    <span class="home-filter__label">Sắp xếp theo</span>
+                    
+                    <div class="selection-input">
+                      <button class="selection-all btn btn--primary">Tất cả</button>
+                      <button class="selection-newest btn btn--primary">Mới nhất</button>
+                      
+                      <div class="selection-input-price">
+                        <span class="select-input__label">Giá</span>
+                        <i class="select-input__icon fa-solid fa-chevron-down"></i>
+                        <!-- List option -->
+                        <ul class="select-input__list">
+                          <li class="seclect-input__item sort-default">
+                            <a class="seclect-input__link">Mặc định</a>
+                          </li>
+                          <li class="seclect-input__item sort-hight">
+                            <a class="seclect-input__link">Giá: Cao->Thấp</a>
+                          </li>
+                          <li class="seclect-input__item sort-low">
+                             <a class="seclect-input__link">Giá: Thấp->Cao</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                 
+                    
+                  </div>
+
+                  <div class="home-product">
+                    <div class="grid__row" id="row__product">
+                    
+                      <!-- <div class="grid__col-2-4">
+                        
+                        <div class="product-item">
+                          <div class="product-item__img" style="background-image:url(https://lh3.googleusercontent.com/y5aogHIaOvhHjixQfWdNwdIztOOtFabKaP7YTHJsQHO6giJJbXsU-AHeXwmNhow4cYHzAknJWFjmPapOE9wVgiqb3hVA4ZNp8w=w230-rw);"></div>
+                          <h3 class="product-item__name">Laptop ASUS TUF Gaming FA507RM-HN018W 90NR09C2-M00130 (15.6" Full HD/ 144Hz/AMD Ryzen 7 6800H/8GB/512GB SSD/RTX 3060/Windows 11 Home/2.2kg)</h3>
+                          <div class="pruduct-item__container">
+                            <div class="product-item__price">
+                              <span class="product-item__price-cur">28.990.000 &#8363;</span>
+                              <span class="product-item__price-old">32.990.000 &#8363;</span>
+                            </div>
+
+                            <div class="product-item-freeship">
+                              <i class="product-item-freeship-icon fa-solid fa-truck-fast"></i>
+                            </div>
+                          </div>
+                       
+                          <div class="product-item__sale-off">
+                            <div class="product-item__sale-off-label">TIẾT KIỆM</div>
+                            <div class="product-item__sale-off-value">4.000.000 &#8363; </div>
+                          </div>
+                        </div>
+                      </div> -->
+                      
+                    </div>
+                  </div>
+              </div>
+   
+          
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+  <script type="module" src="./LocalProducts.js"></script>
+  <script type="module" src="./ProductList.js"></script>
+</html>
