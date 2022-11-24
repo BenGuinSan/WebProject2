@@ -81,21 +81,37 @@ function signUp(){
     localStorage.setItem('user',JSON.stringify(userArray));
 }
 
-function signIn(){
-    var username = document.getElementById("username__dn").value;
-    var password = document.getElementById("password__dn").value;
-    
-	var userArray = JSON.parse(localStorage.getItem('user'));
-    for(i=0;i<userArray.length;i++)
-		if(userArray[i].username==username && userArray[i].password==password){
-			alert("Dang nhap thanh cong");
-            hideall();
-            break;
-        }
-	    else{
-        alert("dang nhap khong thanh cong");
+function checklogin() {
+    var username = document.getElementById("username__dn").value.toString();
+    var password = document.getElementById("password__dn").value.toString();
+    var flag=false;
+
+    var userArray = JSON.parse(localStorage.getItem('user'));
+    for (i = 0; i < userArray.length; i++) {
+     if( userArray[i].username.toString() === username && userArray[i].password.toString() === password)
+     {
+        flag = true;
         break;
-        }
+
+     }else{
+        flag=false;
+     }
+    }
+    return flag;
+}
+
+function signIn(){
+let isLoginSuccess = checklogin();
+if(isLoginSuccess==true){
+    hideall();
+    const name = document.getElementsByClassName("header__user-sig")
+    name[0].innerHTML=document.getElementById("username__dn").value;
+    
+}else{
+    alert("fail")
+}
+    
+      
 }
 
 window.onload=function(){
