@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/grid.css"/>
+    <link rel="stylesheet" href="./assets/css/login.css"/>
   </head>
 
   <body>
@@ -46,7 +47,7 @@
               <a href="" class="header__navbar-text">Tư vấn mua hàng: 1091091090</a>
             </li>
             <li class="header__navbar-items">
-              <i class="header__navbar-items-icon fa-solid fa-headphones""></i>
+              <i class="header__navbar-items-icon fa-solid fa-headphones"></i>
               <a href="" class="header__navbar-text">CSKH: 0916161616</a>
             </li>
             <li class="header__navbar-items">
@@ -105,9 +106,9 @@
                     <!-- no-loggin -->
                     <i class="header__user-icon fa-regular fa-circle-user"></i>
                     <div class="header__user-sig">
-                      <span class="header__user-register">Đăng ký</span>
+                      <span class="header__user-register" onclick="opensignup()">Đăng ký</span>
                       <br>
-                      <span class="header__user-login">Đăng nhập</span>
+                      <span class="header__user-login" onclick="opensignin()">Đăng nhập</span>
                     </div>
                     <!-- login -->
                     <!-- <i class="header__user-icon fa-regular fa-circle-user"></i>
@@ -203,7 +204,65 @@
           </div>
         </div>
       </header>
-      
+
+    <!--Login form-->
+    <div class="modal">
+      <div class="modal__overlay" onclick="hideall()"></div>
+        <!--Signin and Signup-->
+        <div class="login__forms">
+            <form action="" class="login__registre block" id="login-in">
+                <h1 class="login__title">Sign In</h1>
+  
+                <div class="login__box">
+                    <i class="fa-regular fa-user login__icon"></i>
+                    <input type="text" placeholder="Username" class="login__input" id="username__dn">
+                </div>
+  
+                <div class="login__box">
+                    <i class="fa-regular fa-lock login__icon"></i>
+                    <input type="password" placeholder="Password" class="login__input" id="password__dn">
+                </div>
+  
+                <a href="#" class="login__forgot">Forgot password?</a>
+  
+                <button type="button" class="login__button" value="Sign Up" onclick="signIn()">Sign In</button>
+  
+                <div>
+                    <span class="login__account">Don't have an Account ?</span>
+                    <span class="login__signin" id="sign-up" onclick="changetoSingup()">Sign Up</span>
+                </div>
+            </form>
+  
+            <form action="" class="login__create none" id="login-up">
+                <h1 class="login__title">Create Account</h1>
+  
+                <div class="login__box">
+                    <i class='fa-regular fa-user login__icon'></i>
+                    <input type="text" placeholder="Username" class="login__input" id="username__dk">
+                </div>
+  
+                <div class="login__box">
+                    <i class="fa-regular fa-envelope login__icon"></i>
+                    <input type="email" placeholder="Email" class="login__input" id="email">
+                </div>
+  
+                <div class="login__box">
+                    <i class="fa-regular fa-lock login__icon"></i>
+                    <input type="password" placeholder="Password" class="login__input" id="password__dk">
+                </div>
+  
+                <button type="button" class="login__button" value="Sign Up" onclick="signUp()">Sign Up</button>
+  
+                <div>
+                    <span class="login__account">Already have an Account ?</span>
+                    <span class="login__signup" id="sign-in" onclick="changetoSingin()">Sign In</span>
+                </div>
+  
+            </form>
+        </div>
+        
+    </div>      
+
       <div class="app__container">
           <div class="slideshow-container">
             <div class="mySlides fade">
@@ -386,4 +445,5 @@
   <script src="./index.js"></script>
   <script type="module" src="./LocalProducts.js"></script>
   <script type="module" src="./ProductList.js"></script>
+  <script src="./login.js"></script>
 </html>
