@@ -811,3 +811,20 @@
   line-height: 2.4rem;
   color: rgb(137, 224, 7);
 }
+
+/*Footer*/
+.footer__block
+{
+  padding: 0 16px;
+  width: 33.3333%;
+}
+
+.footer__nav
+{
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  padding: 6px 0;
+}
