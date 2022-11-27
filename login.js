@@ -108,10 +108,15 @@ if(isLoginSuccess==true){
     name[0].innerHTML=document.getElementById("username__dn").value;
     
 }else{
-    alert("fail")
+    alert("Dang nhap ko thanh cong")
 }
     
       
+}
+
+function logOut() {
+    
+    window.location="index.html"
 }
 
 window.onload=function(){
