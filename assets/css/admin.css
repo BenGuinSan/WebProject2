@@ -1,0 +1,104 @@
+/*ADMIN*/
+.adminMenu table, th,td
+{
+  border: rgb(0, 0, 0.1) solid 0.5px;
+  border-collapse: collapse;
+}
+.adminMenu
+{
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  width: 90%;
+  margin: 5%;
+  
+}
+.adminMenuTitle
+{
+  height: 40px;
+  float: left;
+  width: 100%;
+  font-size: 1.2rem;
+  border: rgb(0, 0, 0.1) solid 1px;
+  border-radius: 10px 10px 0 0;
+  color: rgb(245, 245, 245);
+  background-color: rgb(20, 53, 195);  
+  text-align: center;
+}
+.adminOption
+{
+  height: 25px;
+  float: left;
+  width: 25%;
+  font-size: 1.4rem;
+  border: rgb(0, 0, 0.1) solid 1px;
+  background-color: rgb(245, 245, 245);
+  text-align: center;
+}
+#ProductDisplay
+{
+  display: flex;
+  width: 100%;
+}
+.adminProductCheck
+{
+  display: flex;
+  height: 50px;
+  width: 100%;
+  border: rgb(0, 0, 0.1) solid 1px;
+  align-items: center;
+  justify-content: right;
+}
+.ProductDiv
+{
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.ProductDiv th,td
+{
+  width: 24%;
+}
+.AccountDiv
+{
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.AccountDiv th,td
+{
+  width: 24%;
+}
+.selectSearch
+{
+  height: 30px;
+  width: 150px;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  border-radius: 10px;
+  outline: none;
+}
+#input_price
+{
+  height: 30px;
+  width: 150px;
+  margin: 0 15px;
+  border-radius: 10px;
+}
+.addButton
+{
+  height: 30px;
+  width: 30px;
+  margin: auto 30px;
+  color: white;
+  background-color: rgb(20, 53, 195);  ;
+  border: rgb(0, 0, 0.1) solid 1px;
+  border-radius: 100px;
+}
+.adminButton
+{
+
+  color: white;
+  background-color: rgb(20, 53, 195);  ;
+  text-align: center;
+}

@@ -5,8 +5,232 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css"/>
+    <link rel="stylesheet" href="./assets/css/login.css"/>
+    <link rel="stylesheet" href="./assets/css/admin.css"/>
 </head>
 <body>
+    <div class="app">
+        <header class="header">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-items">
+                        <i class="header__navbar-items-icon fa-solid fa-tag"></i>
+                        <a href="" class="header__navbar-text">Khuyến mãi</a>
+                    </li>
+                    <li class="header__navbar-items">
+                        <i class="header__navbar-items-icon fa-solid fa-building"></i>
+                        <a href="" class="header__navbar-text">Hệ thống Showroom</a>
+                    </li>
+                    <li class="header__navbar-items">
+                        <i class="header__navbar-items-icon fa-solid fa-headphones"></i>
+                        <a href="" class="header__navbar-text">Tư vấn mua hàng: 1091091090</a>
+                    </li>
+                    <li class="header__navbar-items">
+                        <i class="header__navbar-items-icon fa-solid fa-headphones"></i>
+                        <a href="" class="header__navbar-text">CSKH: 0916161616</a>
+                    </li>
+                    <li class="header__navbar-items">
+                        <i class="header__navbar-items-icon fa-solid fa-computer"></i>
+                        <a href="" class="header__navbar-text">Tin công nghệ</a>
+                    </li>
+                </ul>
+            </nav>
+  
+          <div class="header__main-navbar">
+            <div class="grid">
+              <div class="header__mainNav">
+                <div class="header__mainNav-logo">
+                  <a href="/" class="header__mainNav-logo-link">
+                    <img src="./assets/img/zyro-image.png" alt="" class="headr__mainNav-logo-img">
+                  </a>
+                </div>
+  
+                <div class="header__search">
+                  <div class="header__search-border">
+                    <div class="header__search-input-wrap">
+                      <input type="text" class="header__search-input" placeholder="Nhập từ khóa cần tìm">
+  
+                      <div class="header__search-history">
+                        <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                        <ul class="header__search-history-list">
+                          <li class="header__search-history-item">
+                            <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                            <a href="">bàn phím</a>
+                          </li>
+                          <li class="header__search-history-item">
+                            <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                            <a href="">chuột</a>
+                          </li>
+                          <li class="header__search-history-item">
+                            <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                            <a href="">tai nghe</a>
+                          </li>
+                        </ul>
+                        <footer class="header__history-footer">
+                          <a href="" class="header__history-footer-btn">Xem toàn bộ lịch sử</a>
+                        </footer>
+                      </div>
+                    </div>
+                    <button class="header__search-btn">
+                      <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </div>
+                </div>
+                
+  
+                <ul class="header__mainNav-list">
+                  <li class="header__mainNav-item">
+                    <!-- User -->
+                    <div class="header__user">
+                      <!-- no-loggin -->
+                      <i class="header__user-icon fa-regular fa-circle-user"></i>
+                      <div class="user-subnav">
+                        <ul class="user-subnav__list-admin">
+                          <li class="user-subnav__item">Thông tin người dùng</li>
+                          <li class="user-subnav__item">Đăng xuất</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div class="user-subnav">
+                      <ul class="user-subnav__list-admin">
+                        <li class="user-subnav__item">Thông tin người dùng</li>
+                        <li class="user-subnav__item">Đăng xuất</li>
+                      </ul>
+                    </div>
+                  </li>               
+                </ul>   
+              </div>
+            </div>
+          </div>
+        </header>
+    </div>
+
+    <div style="height: 70px;width: 100%;float: left;display: block;"></div>
+    <div class="adminMenu">
+        <div class="adminMenuTitle">
+            <h3>Quản lí</h3>
+        </div>
+        <div style="width:100%">
+            <div class="adminOption" onclick="">
+                <span>Sản phẩm</span> 
+            </div>
+            <div class="adminOption" onclick="">
+                <span>User account</span>
+            </div>
+            <div class="adminOption" onclick="">
+                <span>Đơn hàng</span>
+            </div>
+            <div class="adminOption" onclick="">
+                <span>Thống kê doanh thu</span>
+            </div>
+        </div>
+
+        <!-----------------------------QUAN LI SAN PHAM------------------------------>
+        <div id="ProductDisplay">
+            <div class="adminProductCheck"> 
+                <!-- <div>
+                    <span style="font-size: 1.3rem;margin: 5px;">Giá từ</span>
+                    <input type="text" id="input_price" placeholder="">
+                    <span style="font-size: 1.3rem;margin-right: 5px;">Đến</span>
+                    <input type="text" id="input_price" placeholder="">
+                </div> -->
+
+                <div>
+                    <span style="font-size: 1.3rem;">Loại sản phẩm</span>
+                    <select class="selectSearch" onchange=""> 
+                        <option value="All" >Tất cả</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Monitor">Màn hình máy tính</option>  
+                        <!-- -----------------------------------------
+                            --------------THEM VALUE -----------------
+                        ------------------------------------------------->            
+                        <option value="">Tai nghe</option>
+                        <option value="">Máy chơi game</option>
+                        <option value="">Chuột</option>
+                        <option value="">Bàn phím</option>
+                    </select>
+                </div>
+                
+                
+                <div class="addButton"><i class="fa-solid fa-plus" style="margin: 33%;"></i></div>
+                
+            </div>
+        </div>
+
+        <div class="ProductDiv">
+            <table style="width:100% ;">
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Loại</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th></th>
+                </tr>
+                <!-------------FORMAT TABLE SAN PHAM-------------
+                <tr>
+                    <td>Ten</td>
+                    <td>Loai</td>
+                    <td>Gia</td>
+                    <td>Soluong</td>
+                    <td><div class="adminButton">Xóa</div></td>
+                </tr>
+                -->
+            </table>
+        </div>
+
+        <!--------------------QUAN LI TAI KHOAN------------------->
+        <div class="AccountDiv" style="width: 100%;">
+            <table style="width:100% ;">
+                <tr>
+                    <th>Tên đăng nhập</th>
+                    <th>Mật khẩu</th>
+                    <th>Họ tên</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+                <!-- FORMAT TABLE TAI KHOAN -------
+                <tr>
+                    <td>Tên đăng nhập</td>
+                    <td>Mật khẩu</td>
+                    <td>Họ tên</td>
+                    <td>Email</td>
+                    <td><div class="adminButton">Edit</div></td>
+                </tr>
+                 -->
+            </table>
+        </div>
+
+        <!------------------ QUAN LI DON HANG ------------------>
+        <div>
+          
+        </div>
+    </div>
+
     
 </body>
+
+
+
 </html>
