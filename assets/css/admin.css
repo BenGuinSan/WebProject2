@@ -37,10 +37,10 @@
 }
 #ProductDisplay
 {
-  display: flex;
+  display: block;
   width: 100%;
 }
-.adminProductCheck
+.adminCheck
 {
   display: flex;
   height: 50px;
@@ -59,6 +59,11 @@
 {
   width: 24%;
 }
+#AccountDisplay
+{
+  display: block;
+  width: 100%;
+}
 .AccountDiv
 {
   display: flex;
@@ -73,7 +78,8 @@
 {
   height: 30px;
   width: 150px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  text-align: center;
   margin: 0 15px;
   border-radius: 10px;
   outline: none;
@@ -91,7 +97,7 @@
   width: 30px;
   margin: auto 30px;
   color: white;
-  background-color: rgb(20, 53, 195);  ;
+  background-color: rgb(20, 53, 195);
   border: rgb(0, 0, 0.1) solid 1px;
   border-radius: 100px;
 }
@@ -99,6 +105,36 @@
 {
 
   color: white;
-  background-color: rgb(20, 53, 195);  ;
+  background-color: rgb(20, 53, 195);
   text-align: center;
+}
+#bill_Display
+{
+  display: block;
+  width: 100%;
+}
+.billDiv
+{
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.billDiv th,td
+{
+  width: 24%;
+}
+#ProfitDisplay
+{
+  display: block;
+  width: 100%;
+}
+.ProfitDiv
+{
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.ProfitDiv th,td
+{
+  width: 25%;
 }
