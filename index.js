@@ -77,27 +77,6 @@ categories.forEach(function (category) {
   };
 });
 
-function filterProduct(value) {
-  //  select all cards
-  const listProduct = document.querySelectorAll(".grid__col-2-4");
-  //loop through all cards
-  listProduct.forEach((item) => {
-    //display all cards on 'all' button click
-    if (value == "all") {
-      item.classList.remove("hide");
-    } else {
-      //Check if element contains category class
-      if (item.classList.contains(value)) {
-        //display element based on category
-        item.classList.remove("hide");
-      } else {
-        //hide other elements
-        item.classList.add("hide");
-      }
-    }
-  }); 
-}
-
 searchProduct();
 function searchProduct() {
   const searchBtn = document.querySelector(".header__search-btn");
