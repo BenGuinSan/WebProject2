@@ -20,333 +20,190 @@
     />
     <link
       rel="stylesheet"
-      href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css"
+      href="../assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css"
     />
-    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/grid.css"/>
-    <link rel="stylesheet" href="./assets/css/login.css"/>
-    <link rel="stylesheet" href="./assets/css/admin.css"/>
+    <link rel="stylesheet" href="../assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/grid.css"/>
+    <link rel="stylesheet" href="../assets/css/login.css"/>
+    <link rel="stylesheet" href="../assets/css/admin.css"/>
 </head>
+
 <body>
-    <div class="app">
-        <header class="header">
-            <nav class="header__navbar">
-                <ul class="header__navbar-list">
-                    <li class="header__navbar-items">
-                        <i class="header__navbar-items-icon fa-solid fa-tag"></i>
-                        <a href="" class="header__navbar-text">Khuyến mãi</a>
-                    </li>
-                    <li class="header__navbar-items">
-                        <i class="header__navbar-items-icon fa-solid fa-building"></i>
-                        <a href="" class="header__navbar-text">Hệ thống Showroom</a>
-                    </li>
-                    <li class="header__navbar-items">
-                        <i class="header__navbar-items-icon fa-solid fa-headphones"></i>
-                        <a href="" class="header__navbar-text">Tư vấn mua hàng: 1091091090</a>
-                    </li>
-                    <li class="header__navbar-items">
-                        <i class="header__navbar-items-icon fa-solid fa-headphones"></i>
-                        <a href="" class="header__navbar-text">CSKH: 0916161616</a>
-                    </li>
-                    <li class="header__navbar-items">
-                        <i class="header__navbar-items-icon fa-solid fa-computer"></i>
-                        <a href="" class="header__navbar-text">Tin công nghệ</a>
-                    </li>
-                </ul>
-            </nav>
-  
-          <div class="header__main-navbar">
-            <div class="grid">
-              <div class="header__mainNav">
-                <div class="header__mainNav-logo">
-                  <a href="/" class="header__mainNav-logo-link">
-                    <img src="./assets/img/zyro-image.png" alt="" class="headr__mainNav-logo-img">
-                  </a>
-                </div>
-  
-                <div class="header__search">
-                  <div class="header__search-border">
-                    <div class="header__search-input-wrap">
-                      <input type="text" class="header__search-input" placeholder="Nhập từ khóa cần tìm">
-  
-                      <div class="header__search-history">
-                        <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
-                        <ul class="header__search-history-list">
-                          <li class="header__search-history-item">
-                            <i class="header__serach-history-clock fa-regular fa-clock"></i>
-                            <a href="">bàn phím</a>
-                          </li>
-                          <li class="header__search-history-item">
-                            <i class="header__serach-history-clock fa-regular fa-clock"></i>
-                            <a href="">chuột</a>
-                          </li>
-                          <li class="header__search-history-item">
-                            <i class="header__serach-history-clock fa-regular fa-clock"></i>
-                            <a href="">tai nghe</a>
-                          </li>
-                        </ul>
-                        <footer class="header__history-footer">
-                          <a href="" class="header__history-footer-btn">Xem toàn bộ lịch sử</a>
-                        </footer>
-                      </div>
-                    </div>
-                    <button class="header__search-btn">
-                      <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
-                    </button>
-                  </div>
-                </div>
-                
-  
-                <ul class="header__mainNav-list">
-                  <li class="header__mainNav-item">
-                    <!-- User -->
-                    <div class="header__user">
-                      <!-- no-loggin -->
-                      <i class="header__user-icon fa-regular fa-circle-user"></i>
-                      <div class="user-subnav">
-                        <ul class="user-subnav__list-admin">
-                          <li class="user-subnav__item">Thông tin người dùng</li>
-                          <li class="user-subnav__item">Đăng xuất</li>
-                        </ul>
-                      </div>
-                    </div>
-                    
-                    <div class="user-subnav">
-                      <ul class="user-subnav__list-admin">
-                        <li class="user-subnav__item">Thông tin người dùng</li>
-                        <li class="user-subnav__item">Đăng xuất</li>
-                      </ul>
-                    </div>
-                  </li>               
-                </ul>   
-              </div>
-            </div>
-          </div>
-        </header>
+  <div style="display: flex;background-color: rgb(240, 240, 240);position: relative;">
+    <div class="menuDiv" style="width: 15%;float: left;">
+      <section id="menu">
+        <div class="logo">
+          <img src="../assets/img/zyro-image.png" alt="" class="headr__mainNav-logo-img">
+        </div>
+
+        <div class="option" style="margin-top: 0;" >
+          <li onclick="menu1()"><i class="fa-brands fa-product-hunt" ></i><a href="#" >Sản phẩm</a></li>
+          <li onclick="menu2()"><i class="fa-solid fa-user"></i><a href="#">Tài khoản</a></li>
+          <li onclick="menu3()"><i class="fa-solid fa-sack-dollar"></i><a href="#">Đã bán</a></li>
+        </div>
+      </section>
     </div>
 
-    <div style="height: 70px;width: 100%;float: left;display: block;"></div>
-    <div class="adminMenu">
-        <div class="adminMenuTitle">
-            <h3>Quản lí</h3>
-        </div>
-        <div style="width:100%">
-            <div class="adminOption" onclick="">
-                <span>Sản phẩm</span> 
-            </div>
-            <div class="adminOption" onclick="">
-                <span>User account</span>
-            </div>
-            <div class="adminOption" onclick="">
-                <span>Đơn hàng</span>
-            </div>
-            <div class="adminOption" onclick="">
-                <span>Thống kê doanh thu</span>
-            </div>
-        </div>
+    <div style="width: 15%;height: 100%"></div>
 
-        <!-----------------------------QUAN LI SAN PHAM------------------------------>
-        <div id="ProductDisplay">
-          <div style="width: 100%;">
-              <div class="adminCheck"> 
-                  <!-- <div>
-                      <span style="font-size: 1.3rem;margin: 5px;">Giá từ</span>
-                      <input type="text" id="input_price" placeholder="">
-                      <span style="font-size: 1.3rem;margin-right: 5px;">Đến</span>
-                      <input type="text" id="input_price" placeholder="">
-                  </div> -->
+    <div class="right_content">
 
-                  <div>
-                      <span style="font-size: 1.3rem;">Loại sản phẩm</span>
-                      <select class="selectSearch" onchange=""> 
-                          <option value="All" >Tất cả</option>
-                          <option value="Laptop">Laptop</option>
-                          <option value="Monitor">Màn hình máy tính</option>  
-                          <!-- -----------------------------------------
-                              --------------THEM VALUE -----------------
-                          ------------------------------------------------->            
-                          <option value="">Tai nghe</option>
-                          <option value="">Máy chơi game</option>
-                          <option value="">Chuột</option>
-                          <option value="">Bàn phím</option>
-                      </select>
-                  </div>
-                  
-                  
-                  <div class="addButton"><i class="fa-solid fa-plus" style="margin: 33%;"></i></div>
-                  
+      <div class="navigation">
+        <div class="header__mainNav">
+
+          <div class="header__search">
+            <div class="header__search-border">
+              <div class="header__search-input-wrap">
+                <input type="text" class="header__search-input" placeholder="Nhập từ khóa cần tìm">
+
+                <div class="header__search-history">
+                  <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                  <ul class="header__search-history-list">
+                    <li class="header__search-history-item">
+                      <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                      <a href="">bàn phím</a>
+                    </li>
+                    <li class="header__search-history-item">
+                      <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                      <a href="">chuột</a>
+                    </li>
+                    <li class="header__search-history-item">
+                      <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                      <a href="">tai nghe</a>
+                    </li>
+                  </ul>
+                  <footer class="header__history-footer">
+                    <a href="" class="header__history-footer-btn">Xem toàn bộ lịch sử</a>
+                  </footer>
+                </div>
               </div>
-          </div>
-
-          <div class="ProductDiv">
-              <table style="width:100% ;">
-                  <tr>
-                      <th>Tên sản phẩm</th>
-                      <th>Loại</th>
-                      <th>Giá</th>
-                      <th>Số lượng</th>
-                      <th></th>
-                  </tr>
-                  <!-------------FORMAT TABLE SAN PHAM-------------
-                  <tr>
-                      <td>Ten</td>
-                      <td>Loai</td>
-                      <td>Gia</td>
-                      <td>Soluong</td>
-                      <td><div class="adminButton">Xóa</div></td>
-                  </tr>
-                  -->
-              </table>
-          </div>
-        </div>
-        <!--------------------QUAN LI TAI KHOAN------------------->
-        <div id="AccountDisplay">
-          <div class="AccountDiv" style="width: 100%;">
-              <table style="width:100% ;">
-                  <tr>
-                      <th>Tên đăng nhập</th>
-                      <th>Mật khẩu</th>
-                      <th>Họ tên</th>
-                      <th>Email</th>
-                      <th></th>
-                  </tr>
-                  <!-- FORMAT TABLE TAI KHOAN -------
-                  <tr>
-                      <td>Tên đăng nhập</td>
-                      <td>Mật khẩu</td>
-                      <td>Họ tên</td>
-                      <td>Email</td>
-                      <td><div class="adminButton">Edit</div></td>
-                  </tr>
-                  -->
-              </table>
-          </div>
-        </div>
-        <!------------------ QUAN LI DON HANG ------------------>
-        <div id="bill_Display">
-          <div class="adminCheck">
-            <span style="font-size: 1.3rem;">Tình trạng</span>
-            <select class="selectSearch" style="width: 200px;" onchange="">
-              <option value="">Tất cả</option>
-              <option value="">Đã xử lí</option>
-              <option value="">Chưa xử lí</option>
-            </select>
-          </div>
-
-          <div class="billDiv">
-            <table style="width:100%">
-              <tr>
-                <th>Mã đơn hàng</th>
-                <th>Ngày xuất đơn</th>
-                <th>Tên khách hàng</th>
-                <th>Thông tin liên lạc</th>
-                <th></th>
-              </tr>
-              <!--    FORMAT TABLE DON HANG        
-              <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th><div class="adminButton"><i class="fa-solid fa-check"></i></div></th> HOAC
-                <th><div class="adminButton" style="background-color:red ;"><i class="fa-solid fa-x"></i></div></th>
-              </tr>
-               -->
-            </table>
-          </div>
-        </div>
-
-        <!-------------------------THONG KE DOANH THU------------------->
-        <div id="ProfitDisplay">
-          <div class="ProfitDiv" style="width: 100%;">
-            <table style="width: 100%;">
-              <tr>
-                <th>Mã sản phẩm</th>
-                <th>Tên sản phẩm</th>
-                <th>Số lượng</th>
-                <th>Tổng</th>
-              </tr>
-              <!-- FORMAT TABLE DOANH THU
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-               -->
-            </table>
-          </div>
-        </div>
-    </div>   
-</body>
-
-<footer>
-  <div>
-    <nav>
-      <div class="grid">
-        <div class="grid__row">
-          
-        
-          <div class="footer__block">
-            <h3 class="footer-heading" >Hỗ trợ khách hàng</h3>
-            <a href="" class="footer__nav">Thẻ ưu đãi</a>
-            <a href="" class="footer__nav">Trung tâm bảo hành</a>
-            <a href="" class="footer__nav">Thanh toán và giao hàng</a>
-            <a href="" class="footer__nav">Dịch vụ sửa chữa và bảo trì</a>
-            <a href="" class="footer__nav">Doanh nghiệp thân thiết</a>
-          </div>
-          <div class="footer__block">
-            <h3 class="footer-heading" >Chính sách mau hàng và bảo hành</h3>
-            <a href="" class="footer__nav">Quy định chung</a>
-            <a href="" class="footer__nav">Chính sách bảo mật thông tin</a>
-            <a href="" class="footer__nav">Chính sách vận chuyển và lắp đặt</a>
-            <a href="" class="footer__nav">Chính sách bảo hành</a>
-            <a href="" class="footer__nav">Chính sách đổi trả và hoàn tiền</a>
-            <a href="" class="footer__nav">Chính sách trả góp</a>
-
-          </div>
-          <div class="footer__block">
-            <h3 class="footer-heading" >Thông tin</h3>
-            <a href="" class="footer__nav">Giới thiệu</a>
-            <a href="" class="footer__nav">Thông tin liên hệ</a>
-            <a href="" class="footer__nav">Hệ thống showroom</a>
-            <a href="" class="footer__nav">Hỏi đáp</a>
-            <a href="" class="footer__nav">Tin công nghệ</a>
-            <a href="" class="footer__nav">Tuyển dụng</a>
-          </div>                     
-        </div>
-
-        <div style="width: 35%;float: left;">
-          <div><h3>Phương thức thanh toán</h3></div>
-          <div >
-            <div style="float: left;">
-              <div><i class="fa-solid fa-qrcode" style="scale:300%; padding: 15px 20px;"></i></div>
-              <div style="text-align: center;">QR code</div>
+              <button class="header__search-btn">
+                <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+              </button>
             </div>
-            <div style="float:left">
-              <div><i class="fa-solid fa-credit-card" style="scale:300%;padding: 15px 20px;"></i></div>
-              <div style="text-align: center ;">Banking</div>
-            </div>
-            <div style="float: left;">
-              <div><i class="fa-solid fa-money-bill" style="scale:300%;padding: 15px 20px;"></i></div>
-              <div style="text-align: center;">Tiền mặt</div>
-            </div>
-          </div>            
-        </div>
-
-        <div style="width:65% ;float: left;">
-          <div style="width:100% ;"><h3>Danh sách ngân hàng</h3></div>
-          <div style="padding:10px">
-            <img src="./assets/img/vnpay_banks.png" alt="">
           </div>
-        </div>
 
+          <ul class="header__mainNav-list">
+            <li class="header__mainNav-item">
+              <!-- User -->
+              <div class="header__user">
+                <!-- no-loggin -->
+                <i class="header__user-icon fa-regular fa-circle-user"></i>
+              </div>
+              <div class="user-subnav">
+                <ul class="user-subnav__list-admin">
+                  <li class="user-subnav__item">Thông tin người dùng</li>
+                  <li class="user-subnav__item">Đăng xuất</li>
+                </ul>
+              </div>
+              <div class="user-subnav">
+                <ul class="user-subnav__list-admin">
+                  <li class="user-subnav__item">Thông tin người dùng</li>
+                  <li class="user-subnav__item">Đăng xuất</li>
+                </ul>
+              </div>
+            </li>     
+          </ul>   
+        </div>
       </div>
-    </nav>
+
+      <!--Quan li san pham-->
+      <div id="ProductDisplay">
+        <div class="Product" >
+          <h2>Quản lí sản phẩm</h2>         
+        </div>
+
+        <div class="board">
+          <table style="width:100%">
+            <thead>
+              <tr>
+                <td>ID</td>
+                <td>Tên sản phẩm</td>
+                <td>Phân loại</td>
+                <td>Giá</td>
+                <td><div class="addButton" ><a href="" style="text-decoration: none;color: white;"><i class="fa-solid fa-plus" style="margin: 27%;"></i></a></div></td>
+              </tr>
+            </thead>
+            <tbody id="innerProductList">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <!--Quan li tai khoan-->
+      <div id="AccountDisplay">
+        <div class="Account">
+          <h2>Quản lí tài khoản</h2> 
+        </div>
+
+        <div class="board">
+          <table style="width: 100%;">
+            <thead>
+              <tr>
+                <td>Loại</td>
+                <td>Tên đăng nhập</td>
+                <td>Mật khẩu</td>
+                <td>Email</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody id="innerAccountList">
+
+            </tbody>
+          </table>
+        </div>   
+      </div>
+
+
+      <!--San pham Da ban-->
+      <div id="SoldDisplay">
+        <div class="Sold">
+          <h2>Sản phẩm đã bán</h2>
+        </div>
+        
+        <div class="board">
+          <table style="width: 100%;">
+            <tr>
+              <td>ID</td>
+              <td>Tên sản phẩm</td>
+              <td>Phân loại</td>
+              <td>Giá</td>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+
   </div>
-</footer>
+  
 
+</body>
+<script type="module" src="../admin.js"></script>
+<script>
+  function menu1()
+{
+    document.getElementById("ProductDisplay").style.display= "block";
+    document.getElementById("AccountDisplay").style.display= "none";
+    document.getElementById("SoldDisplay").style.display= "none";
+    
+}
 
+function menu2()
+{
+    document.getElementById("ProductDisplay").style.display= "none";
+    document.getElementById("AccountDisplay").style.display= "block";
+    document.getElementById("SoldDisplay").style.display= "none";
+}
+function menu3()
+{
+    document.getElementById("ProductDisplay").style.display= "none";
+    document.getElementById("AccountDisplay").style.display= "none";
+    document.getElementById("SoldDisplay").style.display= "block";
+}
+</script>
 </html>

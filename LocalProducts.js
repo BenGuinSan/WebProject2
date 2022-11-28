@@ -362,3 +362,11 @@ function renderProductDetails(productList) {
 
 
 start();
+
+
+displayProductList(productList);
+function displayProductList(productList)
+{
+    /* let p=JSON.parse(localStorage.getItem('products')); */
+    console.log(productList);
+}
