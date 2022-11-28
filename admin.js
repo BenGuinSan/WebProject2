@@ -35,8 +35,8 @@ function renderProduct(){
         <td>${value.category}</td>
         <td>${value.price}</td>
         <td>
-            <button onclick="deleteProduct(${index})">Delete</button>
-            <button onclick="editProduct(${index})">Edit</button>
+            <button class="adminButton" onclick="deleteProduct(${index})">Delete</button>
+            <button class="adminButton" onclick="editProduct(${index})">Edit</button>
         </td>
     </tr>    
     ` 
@@ -58,7 +58,7 @@ function renderAccount(){
         <td>${value.username}</td>
         <td>${value.email}</td>
         <td>
-            <button onclick="deleteProduct(${index})">Delete</button>
+            <button class="adminButton" onclick="deleteProduct(${index})">Delete</button>
         </td>
     </tr>    
     ` 
