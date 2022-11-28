@@ -1,140 +1,143 @@
-/*ADMIN*/
-.adminMenu table, th,td
-{
-  border: rgb(0, 0, 0.1) solid 0.5px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table {
   border-collapse: collapse;
 }
-.adminMenu
-{
-  display: flex;
-  flex-wrap: wrap;
-  float: left;
-  width: 90%;
-  margin: 5%;
-  
+thead td {
+  font-size: 14px;
+  padding: 10px 15px;
 }
-.adminMenuTitle
+tbody td {
+  padding: 10px 15px; 
+}
+.menuDiv {
+  width: 15%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+}
+#menu
 {
-  height: 40px;
-  float: left;
+  height: 100%;
   width: 100%;
-  font-size: 1.2rem;
-  border: rgb(0, 0, 0.1) solid 1px;
-  border-radius: 10px 10px 0 0;
-  color: rgb(245, 245, 245);
-  background-color: rgb(20, 53, 195);  
+  background-color: rgb(20, 53, 195);
+}
+#menu .logo {
+  background-color: white;
+  height: 75px;
+  border-bottom:rgb(20, 53, 195) solid 2px;
+}
+#menu .option {
+  margin-top: 40px;
+}
+#menu .option li {
+  list-style: none;
+  padding: 15px 0;
+  transition: 0.2s ease;
+
+}
+#menu .option li:hover {
+  background-color: rgb(200, 140, 205);
+  cursor: pointer;
+}
+#menu .option li i{
+  color: rgb(210, 210, 210);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
+  font-size: 14px;
+  margin: 0 10px 0 25px;
 }
-.adminOption
-{
-  height: 25px;
-  float: left;
-  width: 25%;
-  font-size: 1.4rem;
-  border: rgb(0, 0, 0.1) solid 1px;
-  background-color: rgb(245, 245, 245);
-  text-align: center;
+#menu .option li:hover i,
+#menu .option li:hover a {
+  color: black;
 }
-#ProductDisplay
-{
-  display: block;
-  width: 100%;
+#menu .option li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease;
 }
-.adminCheck
-{
+
+.right_content {
+  width: 85%;
+  position: relative;
+}
+.navigation {
   display: flex;
-  height: 50px;
-  width: 100%;
-  border: rgb(0, 0, 0.1) solid 1px;
+  width: 85%; 
+  background-color: white; 
+  height: 75px;
   align-items: center;
   justify-content: right;
+  border-bottom:rgb(20, 53, 195) solid 2px;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
-.ProductDiv
-{
-  display: flex;
-  width: 100%;
-  font-size: 1.4rem;
-}
-.ProductDiv th,td
-{
-  width: 24%;
-}
-#AccountDisplay
-{
+
+#ProductDisplay {
   display: block;
+  align-items: center;
+}
+.Product {
   width: 100%;
-}
-.AccountDiv
-{
-  display: flex;
-  width: 100%;
-  font-size: 1.4rem;
-}
-.AccountDiv th,td
-{
-  width: 24%;
-}
-.selectSearch
-{
-  height: 30px;
-  width: 150px;
-  font-size: 1.4rem;
+  height: 50px;
   text-align: center;
-  margin: 0 15px;
-  border-radius: 10px;
-  outline: none;
-}
-#input_price
-{
-  height: 30px;
-  width: 150px;
-  margin: 0 15px;
-  border-radius: 10px;
+  margin-top: 120px;
 }
 .addButton
 {
   height: 30px;
   width: 30px;
-  margin: auto 30px;
+  margin: auto ;
   color: white;
   background-color: rgb(20, 53, 195);
   border: rgb(0, 0, 0.1) solid 1px;
   border-radius: 100px;
 }
-.adminButton
-{
+.board {
+  width: 95%;
+  margin: 0px 0 30px 30px;
+  overflow: auto;
+  background-color: white;
+  border-radius: 5px;
+}
 
+.editButton a {
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(20, 53, 195);
+}
+.editButton a:hover {
+  background-color: blue;
   color: white;
-  background-color: rgb(20, 53, 195);
+  font-size: 2rem;
+}
+
+#AccountDisplay {
+  display: none;
+  align-items: center;
+}
+.Account {
+  width: 100%;
+  height: 50px;
   text-align: center;
+  margin-top: 120px;
 }
-#bill_Display
-{
-  display: block;
+
+#SoldDisplay {
+  display: none;
+  align-items: center;
+}
+.Sold {
   width: 100%;
-}
-.billDiv
-{
-  display: flex;
-  width: 100%;
-  font-size: 1.4rem;
-}
-.billDiv th,td
-{
-  width: 24%;
-}
-#ProfitDisplay
-{
-  display: block;
-  width: 100%;
-}
-.ProfitDiv
-{
-  display: flex;
-  width: 100%;
-  font-size: 1.4rem;
-}
-.ProfitDiv th,td
-{
-  width: 25%;
+  height: 50px;
+  text-align: center;
+  margin-top: 120px;
 }

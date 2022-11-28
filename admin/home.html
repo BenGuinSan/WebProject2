@@ -20,13 +20,13 @@
     />
     <link
       rel="stylesheet"
-      href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css"
+      href="../assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css"
     />
-    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/grid.css"/>
-    <link rel="stylesheet" href="./assets/css/login.css"/>
+    <link rel="stylesheet" href="../assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/grid.css"/>
+    <link rel="stylesheet" href="../assets/css/login.css"/>
   </head>
 
   <body>
@@ -61,8 +61,8 @@
           <div class="grid">
             <div class="header__mainNav">
               <div class="header__mainNav-logo">
-                <a href="/" class="header__mainNav-logo-link">
-                  <img src="./assets/img/zyro-image.png" alt="" class="headr__mainNav-logo-img">
+                <a href="./home.html" class="header__mainNav-logo-link">
+                  <img src="../assets/img/zyro-image.png" alt="" class="headr__mainNav-logo-img">
                 </a>
               </div>
 
@@ -103,34 +103,24 @@
                 <li class="header__mainNav-item">
                   <!-- User -->
                   <div class="header__user">
-                    <!-- no-loggin -->
+                    <!-- login -->
                     <i class="header__user-icon fa-regular fa-circle-user"></i>
                     <div class="header__user-sig">
-                      <span class="header__user-register" onclick="opensignup()">Đăng ký</span>
-                      <br>
-                      <span class="header__user-login" onclick="opensignin()">Đăng nhập</span>
+                      <div class="user-name">Admin</div>
                     </div>
-                    <!-- login -->
-                    <!-- <i class="header__user-icon fa-regular fa-circle-user"></i>
-                    <div class="user-name">Thanh Phúc</div> -->
                   </div>
-                  <!-- <div class="user-subnav">
-                    <ul class="user-subnav__list-admin">
+                  <div class="user-subnav">
+                    <ul class="user-subnav__list">
                       <li class="user-subnav__item">Thông tin người dùng</li>
+                      <li class="user-subnav__item">Sản phẩm đã bán</li>
                       <li class="user-subnav__item">Quản lý sản phẩm</li>
-                      <li class="user-subnav__item">Đăng xuất</li>
+                      <li class="user-subnav__item logout" onclick="logout()">Đăng xuất</li>
                     </ul>
-                  </div> -->
-                  <!-- <div class="user-subnav">
-                    <ul class="user-subnav__list-admin">
-                      <li class="user-subnav__item">Thông tin người dùng</li>
-                      <li class="user-subnav__item" onclick="logOut()">Đăng xuất</li>
-                    </ul>
-                  </div> -->
+                  </div>
                 </li>
                 <li class="header__mainNav-item ">
                   <!-- Notification -->
-                  <div class="header__notify">
+                  <div class="header__notify ">
                     <i class="header__notify-icon fa-regular fa-bell"></i>
                     <span class="header__notify-text">Thông báo</span>
                   </div>
@@ -141,7 +131,7 @@
                     <ul class="header__notify-list">
                       <li class="header__notify-item ">
                         <a href="" class="header__notify-link">
-                          <img src="./assets/img/noti-img-1.jpg" alt="" class="header__notify-img">
+                          <img src="../assets/img/noti-img-1.jpg" alt="" class="header__notify-img">
                           <div class="header__notify-info">
                             <span class="header__notify-name">
                               Laptop HP VICTUS chính hãng
@@ -154,7 +144,7 @@
                       </li>
                       <li class="header__notify-item">
                         <a href="" class="header__notify-link">
-                          <img src="./assets/img/noti-img-3.jpg" alt="" class="header__notify-img">
+                          <img src="../assets/img/noti-img-3.jpg" alt="" class="header__notify-img">
                           <div class="header__notify-info">
                             <span class="header__notify-name">
                               Màn hình TUF Gaming ZAKU II
@@ -167,7 +157,7 @@
                       </li>
                       <li class="header__notify-item">
                         <a href="" class="header__notify-link">
-                          <img src="./assets/img/noti-img-2.jpg" alt="" class="header__notify-img">
+                          <img src="../assets/img/noti-img-2.jpg" alt="" class="header__notify-img">
                           <div class="header__notify-info">
                             <span class="header__notify-name">
                               Bàn phím Newmen GM840 Pro Tiên Hạc Trăng chính hãng
@@ -187,12 +177,14 @@
                 </li>
                 <li class="header__mainNav-item">
                   <div class="header__cart">
+                    <a href="" class="header__cart-link">
                       <i class="header__cart-icon ti-shopping-cart"></i>
                       <span class="header__cart-text">Giỏ hàng</span>
+                    </a>  
                   </div>
                   <div class="header__cart-detail">
                     <!-- No-cart -->
-                    <!-- <img src="./assets/img/no-item-cart.png" alt="" class="header__no-cart-img">
+                    <!-- <img src="../assets/img/no-item-cart.png" alt="" class="header__no-cart-img">
                     <span class="header__no-cart-msg">Giỏ hàng chưa có sản phẩm nào</span> -->
                     <!-- Have-cart -->
                     <header class="header__cart-heading">
@@ -275,7 +267,7 @@
           </div>
         </div>
       </header>
-    </div>
+
     <!--Login form-->
     <div class="modal-auth">
       
@@ -342,19 +334,19 @@
             <div class="mySlides fade">
               <div class="numbertext">1 / 3</div>
               <a href="#" class="mySlides-link">
-                <img src="./assets/img/silde-img-1.png" alt="" style="width: 100%;" class="mySlides-img">
+                <img src="../assets/img/silde-img-1.png" alt="" style="width: 100%;" class="mySlides-img">
               </a>
             </div>
             <div class="mySlides fade">
               <div class="numbertext">2 / 3</div>
               <a href="#" class="mySlides-link">
-                <img src="./assets/img/slide-img-2.png" alt="" style="width: 100%;" class="mySlides-img">
+                <img src="../assets/img/slide-img-2.png" alt="" style="width: 100%;" class="mySlides-img">
               </a>
             </div>
             <div class="mySlides fade">
               <div class="numbertext">3 / 3</div>
               <a href="#" class="mySlides-link">
-                <img src="./assets/img/slide-img-3.png" alt="" style="width: 100%;" class="mySlides-img">
+                <img src="../assets/img/slide-img-3.png" alt="" style="width: 100%;" class="mySlides-img">
               </a>
             </div>
             <!-- Nút chuyển hướng -->
@@ -375,25 +367,25 @@
               <div class="grid__col">
                 <div class="banner_item">
                   <a href="#" class="banner__item-link">
-                    <img src="./assets/img/banner-img-1.png" alt="" class="banner__item-img">
+                    <img src="../assets/img/banner-img-1.png" alt="" class="banner__item-img">
                   </a>
                 </div>
 
                 <div class="banner_item">
                     <a href="#" class="banner__item-link">
-                      <img src="./assets/img/banner-img-2.png" alt="" class="banner__item-img">
+                      <img src="../assets/img/banner-img-2.png" alt="" class="banner__item-img">
                     </a>
                 </div>
 
                 <div class="banner_item">
                     <a href="#" class="banner__item-link">
-                      <img src="./assets/img/banner-img-3.png" alt="" class="banner__item-img">
+                      <img src="../assets/img/banner-img-3.png" alt="" class="banner__item-img">
                     </a>
                 </div>
 
                 <div class="banner_item">
                     <a href="#" class="banner__item-link">
-                      <img src="./assets/img/banner-img-4.png" alt="" class="banner__item-img">
+                      <img src="../assets/img/banner-img-4.png" alt="" class="banner__item-img">
                     </a>
                 </div>
               </div>
@@ -482,41 +474,13 @@
 
                   <div class="home-product">
                     <div class="grid__row" id="row__product">
-                    
-                      <!-- <div class="grid__col-2-4">
-                        
-                        <div class="product-item">
-                          <div class="product-item__img" style="background-image:url(https://lh3.googleusercontent.com/y5aogHIaOvhHjixQfWdNwdIztOOtFabKaP7YTHJsQHO6giJJbXsU-AHeXwmNhow4cYHzAknJWFjmPapOE9wVgiqb3hVA4ZNp8w=w230-rw);"></div>
-                          <h3 class="product-item__name">Laptop ASUS TUF Gaming FA507RM-HN018W 90NR09C2-M00130 (15.6" Full HD/ 144Hz/AMD Ryzen 7 6800H/8GB/512GB SSD/RTX 3060/Windows 11 Home/2.2kg)</h3>
-                          <div class="pruduct-item__container">
-                            <div class="product-item__price">
-                              <span class="product-item__price-cur">28.990.000 &#8363;</span>
-                              <span class="product-item__price-old">32.990.000 &#8363;</span>
-                            </div>
-
-                            <div class="product-item-freeship">
-                              <i class="product-item-freeship-icon fa-solid fa-truck-fast"></i>
-                            </div>
-                          </div>
-                       
-                          <div class="product-item__sale-off">
-                            <div class="product-item__sale-off-label">TIẾT KIỆM</div>
-                            <div class="product-item__sale-off-value">4.000.000 &#8363; </div>
-                          </div>
-                        </div>
-                      </div> -->
-                      
+                      <!-- product-item -->
                     </div>
                   </div>
                   <ul class="product-pagination">
                     <li class="page-item-prev page-disable">Prev</li>
                     <span class="number-page">
-                      <!-- <li class="page-item-current page-active"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item-current"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item-dots"><a class="page-link" href="#">...</a></li>
-                      <li class="page-item-current"><a class="page-link" href="#">5</a></li>
-                      <li class="page-item-dots"><a class="page-link" href="#">...</a></li>
-                      <li class="page-item-current"><a class="page-link" href="#">10</a></li>  -->
+                      <!-- Page list -->
                     </span>
                     <li class="page-item-next">Next</li>
                   </ul>
@@ -530,51 +494,7 @@
           <div class="modal">
             <div class="modal__overlay"></div>
             <div class="modal__body">
-              <!-- <div class="product-view">
-                <div class="product-close-btn">X</div>
-                <div class="product-img-display">
-                  <img  src="https://lh3.googleusercontent.com/1hCWMEhDVua6ey6fbzzGQiDYoUhVuQ9ArIEAz6pAGet_ft7FGbw0aePHQrfxGJcGTOGFXFQNALz9AfDKveA=w230-rw" alt=""> 
-                  <div class="product-detail-info">
-                    <span class="product-info">- CPU: AMD Ryzen 7 6800H</span>
-                    <br>
-                    <span class="product-info">- Màn hình: 15.6" IPS (1920 x 1080),144Hz</span>
-                    <br>
-                    <span class="product-info">- RAM: 1 x 8GB DDR5 4800MHz</span>
-                    <br>
-                    <span class="product-info">- Đồ họa: RTX 3060 6GB GDDR6 / AMD Radeon 680M</span>
-                    <br>
-                    <span class="product-info">- Lưu trữ: 512GB SSD M.2 NVMe /</span>
-                    <br>
-                    <span class="product-info">- Hệ điều hành: Windows 11 Home</span>
-                    <br>
-                    <span class="product-info">- Pin: 4 cell 90 Wh</span>
-                    <br>
-                    <span class="product-info">- Khối lượng: 2.2kg</span>
-                  </div> 
-                </div>
-                <div class="product-des">
-                  <h2 class="product-detail-name">
-                    Laptop APPLE MacBook Air 2020 MVH42SA/A (13.3\" Intel Core i5/8GB/512GB SSD/Onboard/macOS/1.3kg)
-                  </h2>
-                  <h5 class="product-detail-id">
-                    Product ID: 2
-                  </h5>
-                  <h5 class="product-detail-brand">
-                    Brand: APPLE
-                  </h5>
-                  <h6 class="product-detail-review">
-                    <a href="#">View all review</a>
-                  </h6>
-                  <div class="product-detail-price">
-                    <span class="product-detail-priceCur">28,990,000 &#8363</span>
-                    <span class="product-detail-priceOld">32,990,000 &#8363</span>
-                  </div>
-                  <div class="product-detail-btn">
-                    <button class="product-detail-buy">Mua ngay</button>
-                    <button class="product-detail-addCart">Thêm vào giỏ hàng</button>
-                  </div>
-                </div>
-              </div> -->
+              <!-- modal-product  -->
             </div>
           </div>
       </div>
@@ -646,8 +566,8 @@
       </div>
     </footer> -->
   </body>
-  <script src="./index.js"></script>
-  <script type="module" src="./LocalProducts.js"></script>
-  <script type="module" src="./ProductList.js"></script>
-  <script src="./login.js"></script>
+  <script src="../index.js"></script>
+  <script type="module" src="../LocalProducts.js"></script>
+  <script type="module" src="../ProductList.js"></script>
+  <script src="../login.js"></script>
 </html>

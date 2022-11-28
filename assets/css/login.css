@@ -6,7 +6,7 @@
     --first-color-lighten: #F2F2F2;
   }
 
-.modal {
+.modal-auth {
     position: fixed;
     top: 0;
     right: 0;
@@ -18,7 +18,7 @@
     z-index: 1;
 }
 
-.modal__overlay {
+.modal__overlay-auth {
     position: fixed;
     top: 0;
     right: 0;

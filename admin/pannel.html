@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/grid.css"/>
+    <link rel="stylesheet" href="../assets/css/login.css"/>
+    <link rel="stylesheet" href="../assets/css/admin.css"/>
+</head>
+
+<body>
+  <div style="display: flex;background-color: rgb(240, 240, 240);position: relative;">
+    <div class="menuDiv" style="width: 15%;float: left;">
+      <section id="menu">
+        <div class="logo">
+          <img src="../assets/img/zyro-image.png" alt="" class="headr__mainNav-logo-img">
+        </div>
+
+        <div class="option" style="margin-top: 0;" >
+          <li id="menuli1" onclick="menu1()"><i class="fa-brands fa-product-hunt" ></i><a href="#" >Sản phẩm</a></li>
+          <li id="menuli2" onclick="menu2()"><i class="fa-solid fa-user"></i><a href="#">Tài khoản</a></li>
+          <li id="menuli3" onclick="menu3()"><i class="fa-solid fa-sack-dollar"></i><a href="#">Đã bán</a></li>
+        </div>
+      </section>
+    </div>
+
+    <div style="width: 15%;height: 100%"></div>
+
+    <div class="right_content">
+
+      <div class="navigation">
+        <div class="header__mainNav">
+
+          <div class="header__search">
+            <div class="header__search-border">
+              <div class="header__search-input-wrap">
+                <input type="text" class="header__search-input" placeholder="Nhập từ khóa cần tìm">
+
+                <div class="header__search-history">
+                  <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                  <ul class="header__search-history-list">
+                    <li class="header__search-history-item">
+                      <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                      <a href="">bàn phím</a>
+                    </li>
+                    <li class="header__search-history-item">
+                      <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                      <a href="">chuột</a>
+                    </li>
+                    <li class="header__search-history-item">
+                      <i class="header__serach-history-clock fa-regular fa-clock"></i>
+                      <a href="">tai nghe</a>
+                    </li>
+                  </ul>
+                  <footer class="header__history-footer">
+                    <a href="" class="header__history-footer-btn">Xem toàn bộ lịch sử</a>
+                  </footer>
+                </div>
+              </div>
+              <button class="header__search-btn">
+                <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+
+          <ul class="header__mainNav-list">
+            <li class="header__mainNav-item">
+              <!-- User -->
+              <div class="header__user">
+                <!-- no-loggin -->
+                <i class="header__user-icon fa-regular fa-circle-user"></i>
+              </div>
+              <div class="user-subnav">
+                <ul class="user-subnav__list-admin">
+                  <li class="user-subnav__item">Thông tin người dùng</li>
+                  <li class="user-subnav__item">Đăng xuất</li>
+                </ul>
+              </div>
+              <div class="user-subnav">
+                <ul class="user-subnav__list-admin">
+                  <li class="user-subnav__item">Thông tin người dùng</li>
+                  <li class="user-subnav__item">Đăng xuất</li>
+                </ul>
+              </div>
+            </li>     
+          </ul>   
+        </div>
+      </div>
+
+      <!--Quan li san pham-->
+      <div id="ProductDisplay">
+        <div class="Product" >
+          <h2>Quản lí sản phẩm</h2>         
+        </div>
+
+        <div class="board">
+          <table style="width:100%">
+            <thead>
+              <tr>
+                <td>ID</td>
+                <td>Tên sản phẩm</td>
+                <td>Phân loại</td>
+                <td>Giá</td>
+                <td><div class="addButton" ><a href="" style="text-decoration: none;color: white;"><i class="fa-solid fa-plus" style="margin: 27%;"></i></a></div></td>
+              </tr>
+            </thead>
+            <tbody id="innerProductList">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <!--Quan li tai khoan-->
+      <div id="AccountDisplay">
+        <div class="Account">
+          <h2>Quản lí tài khoản</h2> 
+        </div>
+
+        <div class="board">
+          <table style="width: 100%;">
+            <thead>
+              <tr>
+                <td>Loại</td>
+                <td>Tên đăng nhập</td>
+                <td>Mật khẩu</td>
+                <td>Email</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody id="innerAccountList">
+
+            </tbody>
+          </table>
+        </div>   
+      </div>
+
+
+      <!--San pham Da ban-->
+      <div id="SoldDisplay">
+        <div class="Sold">
+          <h2>Sản phẩm đã bán</h2>
+        </div>
+        
+        <div class="board">
+          <table style="width: 100%;">
+            <thead>
+              <tr>
+                <td>ID</td>
+                <td>Tên sản phẩm</td>
+                <td>Phân loại</td>
+                <td>Giá</td>
+              </tr>
+            </thead>
+            <tbody id="innerSold">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  
+
+</body>
+<script type="module" src="../admin.js"></script>
+<script>
+  function menu1()
+{
+    document.getElementById("ProductDisplay").style.display= "block";
+    document.getElementById("AccountDisplay").style.display= "none";
+    document.getElementById("SoldDisplay").style.display= "none";
+    
+    document.getElementById("menuli1").style.backgroundColor = "rgb(150,170,200)";
+    document.getElementById("menuli2").style.backgroundColor = "rgb(20, 53, 195)";
+    document.getElementById("menuli3").style.backgroundColor = "rgb(20, 53, 195)";
+
+}
+
+function menu2()
+{
+    document.getElementById("ProductDisplay").style.display= "none";
+    document.getElementById("AccountDisplay").style.display= "block";
+    document.getElementById("SoldDisplay").style.display= "none";
+
+    document.getElementById("menuli1").style.backgroundColor = "rgb(20, 53, 195)";
+    document.getElementById("menuli2").style.backgroundColor = "rgb(150,170,200)";
+    document.getElementById("menuli3").style.backgroundColor = "rgb(20, 53, 195)";
+
+}
+function menu3()
+{
+    document.getElementById("ProductDisplay").style.display= "none";
+    document.getElementById("AccountDisplay").style.display= "none";
+    document.getElementById("SoldDisplay").style.display= "block";
+
+    document.getElementById("menuli1").style.backgroundColor = "rgb(20, 53, 195)";
+    document.getElementById("menuli2").style.backgroundColor = "rgb(20, 53, 195)";
+    document.getElementById("menuli3").style.backgroundColor = "rgb(150,170,200)";
+
+}
+</script>
+</html>
