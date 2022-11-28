@@ -117,10 +117,12 @@
 
 
         <div class="add-edit-board">
-          <input type="text" name="Ten" id="" placeholder=" Tên">
-          <input type="text" name="" id="" placeholder=" Loại">
-          <input type="text" name="" id="" placeholder=" Giá">
-          <input class="adminButton" style="width: 50px;" type="button" value=" Thêm">
+          <input type="text" name="Ten" id="name" placeholder=" Tên">
+          <input type="text" name="" id="category" placeholder=" Loại">
+          <input type="text" name="" id="price" placeholder=" Giá">
+          <input id="add" class="adminButton" style="width: 50px;" type="button" value=" Thêm" onclick="createProduct()">
+          <button class="addminButton"id="update" onclick="changeProduct()" style="display: none">Sửa</button>
+          <input id="index" type="hidden">
         </div>
 
         <div class="board">
@@ -197,7 +199,7 @@
   
 
 </body>
-<script type="module" src="../admin.js"></script>
+<script src="../admin.js"></script>
 <script>
   function menu1()
 {

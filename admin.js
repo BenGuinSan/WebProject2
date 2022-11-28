@@ -1,26 +1,75 @@
-/*import { products } from "./ProductList.js";
-
-var a=localStorage.getItem("ProductList");
-var productList = JSON.parse(a);
-var productList = products;
-function displayProductList(productList)
-{
-    var s= productList.map(function(product){
-    let priceCur = product.price - product.saleoffvalue;
-    let priceCurrent = priceCur.toLocaleString();
-    return `
-      <tr>
-        <td>${product.id}</td>
-        <td>${product.name}</td>
-        <td>${product.category}</td>
-        <td>${priceCurrent}</td>
-        <td class="editButton"><a href="#">Sửa</a> / <a href="#">Xóa</a></td>
-        </tr>
-      `
-    });
-    document.getElementById('innerProductList').innerHTML = s.join('');
+function resetInput(){
+    document.getElementById('name').value = ""
+    document.getElementById('category').value = ""
+    document.getElementById('price').value = ""
 }
-displayProductList(productList);*/
+
+function createProduct(){
+    
+    const name = document.getElementById('name').value
+    const category = document.getElementById('category').value
+    const price = document.getElementById('price').value
+    
+    let jsonProduct = localStorage.getItem('ProductList') ? JSON.parse(localStorage.getItem('ProductList')) : []
+
+    if(!name.replace(/\s+/,'').length){
+        alert("Ten rong");
+        return false;
+    }else
+    if(!category.replace(/\s+/,'').length){
+        alert("Ten rong");
+        return false;
+    }else  
+    if(!price.match(/\d+/).length){
+        alert("Gia rong");
+        return false;
+    }
+    jsonProduct.push({
+        name:name,
+        category:category,
+        price:price
+    })
+    
+    localStorage.setItem('ProductList',JSON.stringify(jsonProduct))
+    renderProduct()
+    resetInput()
+}
+
+function deleteProduct(index){
+    let jsonProduct = localStorage.getItem('ProductList') ? JSON.parse(localStorage.getItem('ProductList')) : []
+
+	if (confirm("Are you sure")) {
+        jsonProduct.splice(index,1)
+    }
+    localStorage.setItem('ProductList',JSON.stringify(jsonProduct));
+	renderProduct();
+}
+
+function editProduct(index){
+    let jsonProduct = localStorage.getItem('ProductList') ? JSON.parse(localStorage.getItem('ProductList')) : []
+    document.getElementById("name").value = jsonProduct[index].name
+    document.getElementById("category").value = jsonProduct[index].category
+    document.getElementById("price").value = jsonProduct[index].price
+    document.getElementById("index").value = index
+
+    document.getElementById("add").style.display="none"
+    document.getElementById("update").style.display="inline-block"
+}
+function changeProduct(){
+    let jsonProduct= localStorage.getItem('ProductList') ? JSON.parse(localStorage.getItem('ProductList')) : []
+    let index = document.getElementById("index").value
+    jsonProduct[index] = {
+        name: document.getElementById("name").value,
+        category: document.getElementById("category").value,
+        price: document.getElementById("price").value
+    }
+    localStorage.setItem('ProductList',JSON.stringify(jsonProduct))
+    document.getElementById("add").style.display = "inline-block"
+    document.getElementById("update").style.display = "none"
+    renderProduct()
+    resetInput()
+}
+
 
 function renderProduct(){
     let jsonProduct= localStorage.getItem('ProductList') ? JSON.parse(localStorage.getItem('ProductList')) : []
@@ -30,7 +79,7 @@ function renderProduct(){
 
     jsonProduct.map((value,index)=>{
         productdb +=`<tr>
-        <td>${index}</td>
+        <td>${index+1}</td>
         <td>${value.name}</td>
         <td>${value.category}</td>
         <td>${value.price}</td>
