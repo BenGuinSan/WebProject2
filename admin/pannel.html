@@ -39,9 +39,9 @@
         </div>
 
         <div class="option" style="margin-top: 0;" >
-          <li onclick="menu1()"><i class="fa-brands fa-product-hunt" ></i><a href="#" >Sản phẩm</a></li>
-          <li onclick="menu2()"><i class="fa-solid fa-user"></i><a href="#">Tài khoản</a></li>
-          <li onclick="menu3()"><i class="fa-solid fa-sack-dollar"></i><a href="#">Đã bán</a></li>
+          <li id="menuli1" onclick="menu1()"><i class="fa-brands fa-product-hunt" ></i><a href="#" >Sản phẩm</a></li>
+          <li id="menuli2" onclick="menu2()"><i class="fa-solid fa-user"></i><a href="#">Tài khoản</a></li>
+          <li id="menuli3" onclick="menu3()"><i class="fa-solid fa-sack-dollar"></i><a href="#">Đã bán</a></li>
         </div>
       </section>
     </div>
@@ -197,6 +197,10 @@
     document.getElementById("AccountDisplay").style.display= "none";
     document.getElementById("SoldDisplay").style.display= "none";
     
+    document.getElementById("menuli1").style.backgroundColor = "rgb(150,170,200)";
+    document.getElementById("menuli2").style.backgroundColor = "rgb(20, 53, 195)";
+    document.getElementById("menuli3").style.backgroundColor = "rgb(20, 53, 195)";
+
 }
 
 function menu2()
@@ -204,12 +208,22 @@ function menu2()
     document.getElementById("ProductDisplay").style.display= "none";
     document.getElementById("AccountDisplay").style.display= "block";
     document.getElementById("SoldDisplay").style.display= "none";
+
+    document.getElementById("menuli1").style.backgroundColor = "rgb(20, 53, 195)";
+    document.getElementById("menuli2").style.backgroundColor = "rgb(150,170,200)";
+    document.getElementById("menuli3").style.backgroundColor = "rgb(20, 53, 195)";
+
 }
 function menu3()
 {
     document.getElementById("ProductDisplay").style.display= "none";
     document.getElementById("AccountDisplay").style.display= "none";
     document.getElementById("SoldDisplay").style.display= "block";
+
+    document.getElementById("menuli1").style.backgroundColor = "rgb(20, 53, 195)";
+    document.getElementById("menuli2").style.backgroundColor = "rgb(20, 53, 195)";
+    document.getElementById("menuli3").style.backgroundColor = "rgb(150,170,200)";
+
 }
 </script>
 </html>

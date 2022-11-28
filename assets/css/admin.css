@@ -42,11 +42,8 @@ tbody td {
 
 }
 #menu .option li:hover {
-  background-color: rgb(75, 140, 205);
+  background-color: rgb(200, 140, 205);
   cursor: pointer;
-}
-#menu .option li:nth-child(1) {
-  border-left: solid 4px;
 }
 #menu .option li i{
   color: rgb(210, 210, 210);
@@ -59,11 +56,11 @@ tbody td {
 }
 #menu .option li:hover i,
 #menu .option li:hover a {
-  color: white;
+  color: black;
 }
 #menu .option li a {
   text-decoration: none;
-  color: rgb(210, 210, 210);
+  color: white;
   transition: 0.2s ease;
 }
 
@@ -85,7 +82,7 @@ tbody td {
 }
 
 #ProductDisplay {
-  display: none;
+  display: block;
   align-items: center;
 }
 .Product {
