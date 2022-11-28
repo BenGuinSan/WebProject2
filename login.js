@@ -1,5 +1,5 @@
 function opensignin(){
-    const open__1=document.getElementsByClassName("modal");
+    const open__1=document.getElementsByClassName("modal-auth");
     const open__2=document.getElementsByClassName("none");
     const open__3=document.getElementsByClassName("block");
     open__1[0].style.display="block";
@@ -9,7 +9,7 @@ function opensignin(){
 }
 
 function opensignup(){
-    const open__1=document.getElementsByClassName("modal");
+    const open__1=document.getElementsByClassName("modal-auth");
     const open__2=document.getElementsByClassName("none");
     const open__3=document.getElementsByClassName("block");
     open__1[0].style.display="block";
@@ -19,7 +19,7 @@ function opensignup(){
 }
 
 function hideall(){
-    const hide=document.getElementsByClassName("modal");
+    const hide=document.getElementsByClassName("modal-auth");
     hide[0].style.display='none';
 }
 
@@ -46,7 +46,6 @@ function admin(){
             userArray.push(user1);
             localStorage.setItem('user',JSON.stringify(userArray));
     }
-    
 }
 
 function signUp(){
@@ -81,14 +80,33 @@ function signUp(){
     localStorage.setItem('user',JSON.stringify(userArray));
 }
 
-function checklogin() {
+function checkloginAdmin() {
     var username = document.getElementById("username__dn").value.toString();
     var password = document.getElementById("password__dn").value.toString();
     var flag=false;
 
     var userArray = JSON.parse(localStorage.getItem('user'));
     for (i = 0; i < userArray.length; i++) {
-     if( userArray[i].username.toString() === username && userArray[i].password.toString() === password)
+     if( userArray[i].username.toString() === username && userArray[i].password.toString() === password && userArray[i].usertype === 1)
+     {
+        flag = true;
+        break;
+
+     }else{
+        flag=false;
+     }
+    }
+    return flag;
+}
+
+function checkloginUser() {
+    var username = document.getElementById("username__dn").value.toString();
+    var password = document.getElementById("password__dn").value.toString();
+    var flag=false;
+
+    var userArray = JSON.parse(localStorage.getItem('user'));
+    for (i = 0; i < userArray.length; i++) {
+     if( userArray[i].username.toString() === username && userArray[i].password.toString() === password && userArray[i].usertype === 0)
      {
         flag = true;
         break;
@@ -101,18 +119,26 @@ function checklogin() {
 }
 
 function signIn(){
-let isLoginSuccess = checklogin();
-if(isLoginSuccess==true){
+let isLoginSuccessAdmin = checkloginAdmin();
+let isLoginSuccessUser = checkloginUser();
+if(isLoginSuccessAdmin ==true){
     hideall();
-    const name = document.getElementsByClassName("header__user-sig")
-    name[0].innerHTML=document.getElementById("username__dn").value;
-    
+    window.location.href = 'admin/home.html'
+}else if(isLoginSuccessUser == true){
+    hideall();
+    window.location.href = 'user/home.html'
 }else{
-    alert("fail")
+    return alert('ko thanh cong')   
 }
-    
-      
 }
+
+function logout(){
+    const logoutBtn = document.querySelector('.logout');
+    logoutBtn.addEventListener('click',function(){
+        window.location.href = '../index.html';
+    })
+}
+
 
 window.onload=function(){
     admin();
