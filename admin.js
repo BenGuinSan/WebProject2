@@ -38,6 +38,7 @@ displayProductList(productList);
         <td class="editButton"><a href="#">Sửa</a> / <a href="#">Xóa</a></td>
     </tr>
     `
+    document.getElementById('innerAccount').innerHTML = s.join('');
 }
 displayAccountList();
 
@@ -50,6 +51,7 @@ function displaySoldList() {
         <td></td>
     </tr>
     `
+    document.getElementById('innerSold').innerHTML = s.join('');
 }
 displaySoldList(); */
 
