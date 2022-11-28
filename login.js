@@ -49,6 +49,24 @@ function admin(){
     
 }
 
+function checksignup() {
+    var username = document.getElementById("username__dk").value.toString();
+    var flag=false;
+
+    var userArray = JSON.parse(localStorage.getItem('user'));
+    for (i = 0; i < userArray.length; i++) {
+     if( userArray[i].username.toString() === username)
+     {
+        flag = true;
+        break;
+
+     }else{
+        flag=false;
+     }
+    }
+    return flag;
+}
+
 function signUp(){
     userArray = JSON.parse(localStorage.getItem('user'));
 
@@ -68,7 +86,8 @@ function signUp(){
         alert("Password rong");
         return false;
     }
-
+    let isExist = checksignup()
+    if(isExist!=true){
 
     let user={
         username:username,
@@ -79,6 +98,10 @@ function signUp(){
     
     userArray.push(user);
     localStorage.setItem('user',JSON.stringify(userArray));
+    }else{
+        alert("Tai khoan da ton tai")
+        return false;
+    }
 }
 
 function checklogin() {
