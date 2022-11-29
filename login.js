@@ -88,7 +88,7 @@ function signUp(){
     }
     let isExist = checksignup()
     if(isExist!=true){
-
+    alert("Dang ki thanh cong")
     let user={
         username:username,
         email:email,

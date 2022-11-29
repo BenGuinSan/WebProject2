@@ -126,13 +126,25 @@ function renderAccount() {
         <td>${value.username}</td>
         <td>${value.email}</td>
         <td>
-            <button class="adminButton" onclick="deleteProduct(${index})">Delete</button>
+            <button class="adminButton" onclick="deleteAccount(${index})">Delete</button>
         </td>
     </tr>    
     `;
   });
 
   document.getElementById("innerAccountList").innerHTML = userdb;
+}
+
+function deleteAccount(index) {
+  let userArray = localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))
+    : [];
+
+  if (confirm("Are you sure")) {
+    userArray.splice(index, 1);
+  }
+  localStorage.setItem("user", JSON.stringify(userArray));
+  renderAccount();
 }
 
 window.onload = function () {

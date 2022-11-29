@@ -133,6 +133,17 @@ tbody td {
   cursor: pointer;
 }
 
+.add-edit-board button {
+  height: 25px;
+  width: 40px;
+  background-color: rgb(20, 53, 195);
+  color: white;
+}
+.add-edit-board button:hover {
+  background-color: rgb(200, 140, 205);
+  cursor: pointer;
+}
+
 
 #AccountDisplay {
   display: none;

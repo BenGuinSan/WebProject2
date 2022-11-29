@@ -466,7 +466,7 @@ function renderProductDetails(productList) {
             <span class="header__cart-price">
               ${priceCur} &#8363
             </span>
-            
+            <buton onclick="deleteCartItem()">Xoa</button>
           </div>
         </a>
       </li>
@@ -479,8 +479,13 @@ function renderProductDetails(productList) {
       
       `;
     }
+
   }
+
+
 }
+
+
 
 function renderAll(productList) {
   const renderAllBtn = document.querySelector(".category-all");
