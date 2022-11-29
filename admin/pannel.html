@@ -22,6 +22,7 @@
       rel="stylesheet"
       href="../assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css"
     />
+    <link rel="icon" href="https://i.pinimg.com/originals/f5/6b/72/f56b725ec3fb0e519722561313e4cc10.png">
     <link rel="stylesheet" href="../assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../assets/css/base.css" />
     <link rel="stylesheet" href="../assets/css/main.css" />
@@ -95,13 +96,7 @@
               <div class="user-subnav">
                 <ul class="user-subnav__list-admin">
                   <li class="user-subnav__item">Thông tin người dùng</li>
-                  <li class="user-subnav__item">Đăng xuất</li>
-                </ul>
-              </div>
-              <div class="user-subnav">
-                <ul class="user-subnav__list-admin">
-                  <li class="user-subnav__item">Thông tin người dùng</li>
-                  <li class="user-subnav__item">Đăng xuất</li>
+                  <li class="user-subnav__item logout" onclick="logout()">Đăng xuất</li>
                 </ul>
               </div>
             </li>     
@@ -199,6 +194,7 @@
   
 
 </body>
+<script src="../login.js"></script>
 <script src="../admin.js"></script>
 <script>
   function menu1()

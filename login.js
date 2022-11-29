@@ -1,3 +1,4 @@
+
 function opensignin(){
     const open__1=document.getElementsByClassName("modal-auth");
     const open__2=document.getElementsByClassName("none");
@@ -162,6 +163,12 @@ function logout(){
     })
 }
 
+function adminPannel(){
+    const adminPannelBtn = document.querySelector('.admin-pannel');
+    adminPannelBtn.addEventListener('click',function(){
+        window.location.href = './pannel.html';
+    })
+}
 
 window.onload=function(){
     admin();

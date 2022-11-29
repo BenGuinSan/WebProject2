@@ -22,6 +22,7 @@
       rel="stylesheet"
       href="../assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css"
     />
+    <link rel="icon" href="https://i.pinimg.com/originals/f5/6b/72/f56b725ec3fb0e519722561313e4cc10.png">
     <link rel="stylesheet" href="../assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../assets/css/base.css" />
     <link rel="stylesheet" href="../assets/css/main.css" />
@@ -113,7 +114,7 @@
                     <ul class="user-subnav__list">
                       <li class="user-subnav__item">Thông tin người dùng</li>
                       <li class="user-subnav__item">Sản phẩm đã bán</li>
-                      <li class="user-subnav__item">Quản lý sản phẩm</li>
+                      <li class="user-subnav__item admin-pannel" onclick="adminPannel()">Trang quản trị</li>
                       <li class="user-subnav__item logout" onclick="logout()">Đăng xuất</li>
                     </ul>
                   </div>
@@ -180,6 +181,7 @@
                     <a href="" class="header__cart-link">
                       <i class="header__cart-icon ti-shopping-cart"></i>
                       <span class="header__cart-text">Giỏ hàng</span>
+                      <span class="header__cart-notice">0</span>
                     </a>  
                   </div>
                   <div class="header__cart-detail">
@@ -397,43 +399,43 @@
                     Danh mục sản phẩm
                   </h3>
                   <ul class="category-list">
-                    <li class="category-item category-all" onclick="filterProduct('all')">
+                    <li class="category-item category-all">
                       <a class="category-item__link category-item--active ">
                         <i class="category-item-icon fa-solid fa-border-all"></i>
                         <span class="category-item-name">Xem tất cả</span>
                       </a>
                     </li>
-                    <li class="category-item category-lap" onclick="filterProduct('Laptop')">
+                    <li class="category-item category-lap">
                       <a class="category-item__link" >
                         <i class="category-item-icon fa-solid fa-laptop"></i>
                         <span class="category-item-name">Laptop</span>
                       </a>
                     </li>
-                    <li class="category-item category-monitor" onclick="filterProduct('Monitor')">
+                    <li class="category-item category-monitor">
                       <a class="category-item__link">
                         <i class="category-item-icon fa-solid fa-computer"></i>
                         <span class="category-item-name">Màn hình máy tính</span>
                       </a>
                     </li>
-                    <li class="category-item category-headphone" onclick="filterProduct('Headphone')">
+                    <li class="category-item category-headphone">
                       <a class="category-item__link">
                         <i class="category-item-icon fa-solid fa-headphones"></i>
                         <span class="category-item-name">Tai nghe</span>
                       </a>
                     </li>
-                    <li class="category-item category-cosole" onclick="filterProduct('Console')">
+                    <li class="category-item category-console">
                       <a class="category-item__link">
                         <i class="category-item-icon fa-solid fa-gamepad"></i>
                         <span class="category-item-name">Máy chơi game</span>
                       </a>
                     </li>
-                    <li class="category-item category-mouse" onclick="filterProduct('Mouse')">
+                    <li class="category-item category-mouse">
                       <a class="category-item__link">
                         <i class="category-item-icon fa-solid fa-computer-mouse"></i>
                         <span class="category-item-name">Chuột</span>
                       </a>
                     </li>
-                    <li class="category-item category-keyboard" onclick="filterProduct('Keyboard')">
+                    <li class="category-item category-keyboard">
                       <a class="category-item__link">
                         <i class="category-item-icon fa-solid fa-keyboard"></i>
                         <span class="category-item-name">Bàn phím</span>
@@ -500,7 +502,7 @@
       </div>
     </div>
 
-    <!-- <footer>
+    <footer>
       <div>
         <nav>
           <div class="grid">
@@ -557,14 +559,14 @@
             <div style="width:65% ;float: left;">
               <div style="width:100% ;"><h3>Danh sách ngân hàng</h3></div>
               <div style="padding:10px">
-                <img src="./assets/img/vnpay_banks.png" alt="">
+                <img src="../assets/img/vnpay_banks.png" alt="">
               </div>
             </div>
   
           </div>
         </nav>
       </div>
-    </footer> -->
+    </footer>
   </body>
   <script src="../index.js"></script>
   <script type="module" src="../LocalProducts.js"></script>
