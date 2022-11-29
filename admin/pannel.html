@@ -33,7 +33,7 @@
 <body>
   <div style="display: flex;background-color: rgb(240, 240, 240);position: relative;">
     <div class="menuDiv" style="width: 15%;float: left;">
-      <section id="menu">
+      <section class="menu">
         <div class="logo">
           <img src="../assets/img/zyro-image.png" alt="" class="headr__mainNav-logo-img">
         </div>
@@ -110,21 +110,21 @@
       </div>
 
       <!--Quan li san pham-->
-      <div id="ProductDisplay">
+      <div class="ProductDisplay">
         <div class="Product" >
           <h2>Quản lí sản phẩm</h2>       
         </div>
 
 
-        <div class="add-edit-board">
+        <form class="add-edit-board">
           <input type="text" name="Ten" id="name" placeholder=" Tên">
           <input type="text" name="" id="category" placeholder=" Loại">
           <input type="text" name="" id="price" placeholder=" Giá">
           <input id="add" class="adminButton" style="width: 50px;" type="button" value=" Thêm" onclick="createProduct()">
           <button class="addminButton"id="update" onclick="changeProduct()" style="display: none">Sửa</button>
           <input id="index" type="hidden">
-        </div>
-
+        </form>
+        
         <div class="board">
           <table style="width:100%">
             <thead>
@@ -145,7 +145,7 @@
 
 
       <!--Quan li tai khoan-->
-      <div id="AccountDisplay">
+      <div class="AccountDisplay">
         <div class="Account">
           <h2>Quản lí tài khoản</h2> 
         </div>
@@ -170,7 +170,7 @@
 
 
       <!--San pham Da ban-->
-      <div id="SoldDisplay">
+      <div class="SoldDisplay">
         <div class="Sold">
           <h2>Sản phẩm đã bán</h2>
         </div>
