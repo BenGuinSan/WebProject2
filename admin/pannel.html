@@ -34,8 +34,8 @@
 <body>
   <div style="display: flex;background-color: rgb(240, 240, 240);position: relative;">
     <div class="menuDiv" style="width: 15%;float: left;">
-      <section class="menu">
-        <div class="logo">
+      <section id="menu">
+        <div href="./home.html" class="logo">
           <img src="../assets/img/zyro-image.png" alt="" class="headr__mainNav-logo-img">
         </div>
 
@@ -111,15 +111,18 @@
         </div>
 
 
-        <form class="add-edit-board">
-          <input type="text" name="Ten" id="name" placeholder=" Tên">
+        <div class="add-edit-board">
           <input type="text" name="" id="category" placeholder=" Loại">
-          <input type="text" name="" id="price" placeholder=" Giá">
+          <input type="text" name="" id="name" placeholder=" Tên">
+          <input type="text" name="" id="img" placeholder="Hình ảnh">
+          <input type="text" name="" id="trademarks" placeholder="Thương hiệu">
+          <input type="text" name="" id="price" placeholder=" Giá gốc">
+          <input type="text" name="" id="saleoffvalue" placeholder=" Giá giảm">
           <input id="add" class="adminButton" style="width: 50px;" type="button" value=" Thêm" onclick="createProduct()">
           <button class="addminButton"id="update" onclick="changeProduct()" style="display: none">Sửa</button>
           <input id="index" type="hidden">
-        </form>
-        
+        </div>
+
         <div class="board">
           <table style="width:100%">
             <thead>

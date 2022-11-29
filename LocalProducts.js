@@ -1,14 +1,17 @@
-import { products } from "./ProductList.js";
+import { products as defaultProducts } from "./ProductList.js";
 
-// Chuyển products thành chuỗi JSON
-var jsonProduct = JSON.stringify(products);
+var productList = [];
 
-// Truyền dữ liệu từ jsonProduct lên LocalStrorage
-localStorage.setItem("ProductList", jsonProduct);
-localStorage.getItem("ProductList", jsonProduct);
-
-var productList = JSON.parse(jsonProduct);
-var productList = products;
+// Nếu ProductList chưa tồn tại trong localStorage,
+// lấy defaultProducts
+if (!localStorage.getItem("ProductList")) {
+  localStorage.setItem("ProductList", JSON.stringify(defaultProducts));
+  productList = defaultProducts;
+} else {
+  // Nếu ProductList đã tồn tại, lấy ProductList từ LocalStrorage
+  const jsonProduct = localStorage.getItem("ProductList");
+  var productList = JSON.parse(jsonProduct);
+}
 
 function start() {
   renderCoursesAll(productList);
@@ -18,7 +21,7 @@ function start() {
   allProducts(productList);
   productDetail(productList);
   startModal();
-  totalP(productList)
+  totalP(productList);
   renderListPage(productList);
   changePageFuc(productList);
   changePage(productList);
@@ -463,6 +466,7 @@ function renderProductDetails(productList) {
             <span class="header__cart-price">
               ${priceCur} &#8363
             </span>
+            
           </div>
         </a>
       </li>
@@ -476,8 +480,6 @@ function renderProductDetails(productList) {
       `;
     }
   }
-
- 
 }
 
 function renderAll(productList) {
@@ -491,8 +493,8 @@ function renderLap(productList) {
   const renderLapBtn = document.querySelector(".category-lap");
   renderLapBtn.addEventListener("click", function () {
     var lapList = productList.filter(function (product) {
-      return product.category === 'Laptop';
-    })
+      return product.category === "Laptop";
+    });
     totalP(lapList);
     renderCoursesAll(lapList);
     productDetail(lapList);
@@ -511,8 +513,8 @@ function renderMor(productList) {
   const renderMorBtn = document.querySelector(".category-monitor");
   renderMorBtn.addEventListener("click", function () {
     var MorList = productList.filter(function (product) {
-      return product.category === 'Monitor';
-    })
+      return product.category === "Monitor";
+    });
     renderCoursesAll(MorList);
     productDetail(MorList);
     renderProductDetails(MorList);
@@ -530,8 +532,8 @@ function renderHead(productList) {
   const renderHeadBtn = document.querySelector(".category-headphone");
   renderHeadBtn.addEventListener("click", function () {
     var headList = productList.filter(function (product) {
-      return product.category === 'Headphone';
-    })
+      return product.category === "Headphone";
+    });
     totalP(headList);
     renderCoursesAll(headList);
     productDetail(headList);
@@ -550,8 +552,8 @@ function renderCon(productList) {
   const renderConBtn = document.querySelector(".category-console");
   renderConBtn.addEventListener("click", function () {
     var conList = productList.filter(function (product) {
-      return product.category === 'Console';
-    })
+      return product.category === "Console";
+    });
     totalP(conList);
     renderCoursesAll(conList);
     productDetail(conList);
@@ -570,8 +572,8 @@ function renderMouse(productList) {
   const renderMouseBtn = document.querySelector(".category-mouse");
   renderMouseBtn.addEventListener("click", function () {
     var mouseList = productList.filter(function (product) {
-      return product.category === 'Mouse';
-    })
+      return product.category === "Mouse";
+    });
     totalP(mouseList);
     renderCoursesAll(mouseList);
     productDetail(mouseList);
@@ -590,8 +592,8 @@ function renderBoard(productList) {
   const renderBoardBtn = document.querySelector(".category-keyboard");
   renderBoardBtn.addEventListener("click", function () {
     var BoardList = productList.filter(function (product) {
-      return product.category === 'Keyboard';
-    })
+      return product.category === "Keyboard";
+    });
     totalP(BoardList);
     renderCoursesAll(BoardList);
     productDetail(BoardList);
@@ -604,7 +606,6 @@ function renderBoard(productList) {
     sortPriceHightToLow(BoardList);
     sortPriceLowToHight(BoardList);
   });
-}  
-
+}
 
 start();

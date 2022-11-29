@@ -21,31 +21,31 @@ tbody td {
   height: 100%;
 
 }
-.menu
+#menu
 {
   height: 100%;
   width: 100%;
   background-color: rgb(20, 53, 195);
 }
-.menu .logo {
+#menu .logo {
   background-color: white;
   height: 75px;
   border-bottom:rgb(20, 53, 195) solid 2px;
 }
-.menu .option {
+#menu .option {
   margin-top: 40px;
 }
-.menu .option li {
+#menu .option li {
   list-style: none;
   padding: 15px 0;
   transition: 0.2s ease;
 
 }
-.menu .option li:hover {
+#menu .option li:hover {
   background-color: rgb(200, 140, 205);
   cursor: pointer;
 }
-.menu .option li i{
+#menu .option li i{
   color: rgb(210, 210, 210);
   width: 30px;
   height: 30px;
@@ -54,11 +54,11 @@ tbody td {
   font-size: 14px;
   margin: 0 10px 0 25px;
 }
-.menu .option li:hover i,
-.menu .option li:hover a {
+#menu .option li:hover i,
+#menu .option li:hover a {
   color: black;
 }
-.menu .option li a {
+#menu .option li a {
   text-decoration: none;
   color: white;
   transition: 0.2s ease;
