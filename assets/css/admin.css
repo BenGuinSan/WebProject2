@@ -81,7 +81,7 @@ tbody td {
   right: 0;
 }
 
-.ProductDisplay {
+#ProductDisplay {
   display: block;
   align-items: center;
 }
@@ -134,7 +134,7 @@ tbody td {
 }
 
 
-.AccountDisplay {
+#AccountDisplay {
   display: none;
   align-items: center;
 }
@@ -145,7 +145,7 @@ tbody td {
   margin-top: 120px;
 }
 
-.SoldDisplay {
+#SoldDisplay {
   display: none;
   align-items: center;
 }
