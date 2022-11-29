@@ -66,6 +66,9 @@ function editProduct(index) {
   document.getElementById("category").value = jsonProduct[index].category;
   document.getElementById("price").value = jsonProduct[index].price;
   document.getElementById("index").value = index;
+  document.getElementById("img").value = jsonProduct[index].img
+  document.getElementById("trademarks").value = jsonProduct[index].trademarks
+  document.getElementById("saleoffvalue").value = jsonProduct[index].saleoffvalue
 
   document.getElementById("add").style.display = "none";
   document.getElementById("update").style.display = "inline-block";
@@ -78,7 +81,11 @@ function changeProduct() {
   jsonProduct[index] = {
     name: document.getElementById("name").value,
     category: document.getElementById("category").value,
-    price: document.getElementById("price").value,
+    img:document.getElementById("img").value,
+    trademarks: document.getElementById("trademarks").value,
+    price : document.getElementById("price").value,
+    saleoffvalue : document.getElementById("saleoffvalue").value
+
   };
   localStorage.setItem("ProductList", JSON.stringify(jsonProduct));
   document.getElementById("add").style.display = "inline-block";

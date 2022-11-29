@@ -450,7 +450,7 @@ function renderProductDetails(productList) {
         let priceCur = (price * item.incart).toLocaleString();
         productContainer.innerHTML += `
         <li class="header__cart-item">
-        <a href="" class="header__cart-link">
+        <a href="#" class="header__cart-link">
           <img
             src="${item.img}"
             alt=""
@@ -466,7 +466,6 @@ function renderProductDetails(productList) {
             <span class="header__cart-price">
               ${priceCur} &#8363
             </span>
-            <buton onclick="deleteCartItem()">Xoa</button>
           </div>
         </a>
       </li>
@@ -501,6 +500,7 @@ function renderLap(productList) {
       return product.category === "Laptop";
     });
     totalP(lapList);
+    newestProducts(lapList)
     renderCoursesAll(lapList);
     productDetail(lapList);
     renderProductDetails(lapList);
@@ -521,6 +521,7 @@ function renderMor(productList) {
       return product.category === "Monitor";
     });
     renderCoursesAll(MorList);
+    newestProducts(MorList)
     productDetail(MorList);
     renderProductDetails(MorList);
     startModal();
@@ -540,6 +541,8 @@ function renderHead(productList) {
       return product.category === "Headphone";
     });
     totalP(headList);
+    newestProducts(headList)
+    productDetail(headList);
     renderCoursesAll(headList);
     productDetail(headList);
     renderProductDetails(headList);
@@ -560,6 +563,8 @@ function renderCon(productList) {
       return product.category === "Console";
     });
     totalP(conList);
+    newestProducts(conList)
+    productDetail(conList);
     renderCoursesAll(conList);
     productDetail(conList);
     renderProductDetails(conList);
@@ -580,6 +585,7 @@ function renderMouse(productList) {
       return product.category === "Mouse";
     });
     totalP(mouseList);
+    newestProducts(mouseList)
     renderCoursesAll(mouseList);
     productDetail(mouseList);
     renderProductDetails(mouseList);
@@ -600,6 +606,7 @@ function renderBoard(productList) {
       return product.category === "Keyboard";
     });
     totalP(BoardList);
+    newestProducts(BoardList)
     renderCoursesAll(BoardList);
     productDetail(BoardList);
     renderProductDetails(BoardList);
